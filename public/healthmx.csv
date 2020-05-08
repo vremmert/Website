@@ -1,0 +1,243 @@
+number,rID,community,housholdstructure,hp_visit,transportation,hp_difficulty,hp_payment,pay_difficulty,confidence,gender,urban,hp_time,hhsize,age,burden,public_hp,hcu
+1,R_cQGUwNi7fR2c4lI,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Muy difícil,Una parte,Un poco difícil,Mucha confianza,F,0,60,5,45,1,NA,NA
+2,R_4kPd7IAqbMnbwbQ,San Fco Xochiteopan,Extendida,3-4 veces,Carro/caminioneta (propio),Un poco difícil,Todo,Muy difícil,Mucha confianza,F,0,60,5,64,0,1,public
+3,R_dmoHEjkjeq6LV79,San Fco Xochiteopan,Nuclear,3-4 veces,Carro/caminioneta (propio),Un poco difícil,Todo,Muy difícil,Mucha confianza,M,0,30,3,34,0,0,private
+4,R_h3Wd5hkrkAIGEhQ,San Fco Xochiteopan,Extendida,1-2 veces,Carro/caminioneta (propio),Muy difícil,Todo,Muy difícil,Nada de confianza,F,0,60,6,59,1,0,private
+5,R_dBxWSawZdF1zqsr,San Fco Xochiteopan,Nuclear y compuesta,Ninguna vez,Caminando,Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,30,3,30,0,0,private
+6,R_d4lXozxv4tbOKjE,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,15,3,57,0,1,public
+7,R_jnWoB32Vdmiz4kz,San Fco Xochiteopan,Extendida,Ninguna vez,Caminando,Nada difícil,Una parte,Medio difícil,Poca confianza,F,0,2,4,45,0,1,public
+8,R_mJ6FbLcBVAouOBD,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,0,10,2,59,0,1,public
+9,R_mNMzroLN0yUPrSM,San Fco Xochiteopan,Nuclear,5+ veces,Carro/caminioneta (propio),Nada difícil,Todo,Nada difícil,Mucha confianza,M,0,15,3,31,0,0,private
+10,R_iEntPZEE76PKqSE,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Nada difícil,Una parte,Muy difícil,Poca confianza,M,0,10,3,78,0,1,public
+11,R_9tIQtmvBp4rPGR2,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,0,10,3,38,0,1,public
+12,R_hpRh6d1w81FNTNc,San Fco Xochiteopan,Nuclear y compuesta,Ninguna vez,Caminando,Un poco difícil,Una parte,Muy difícil,Mucha confianza,M,0,10,3,60,0,1,public
+13,R_4d7iXxLJeW4CFro,San Fco Xochiteopan,Nuclear y compuesta,1-2 veces,Combi,Muy difícil,Todo,Muy difícil,Poca confianza,M,0,1000,2,77,1,1,public
+14,R_gnb8x4neVszfma9,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Medio difícil,Todo,Muy difícil,Mucha confianza,M,0,5,4,74,0,1,public
+15,R_9rdY27W176fBx7L,San Fco Xochiteopan,Extendida y Compuesta,Ninguna vez,Caminando,Medio difícil,Todo,Medio difícil,Mucha confianza,M,0,15,7,38,0,1,public
+16,R_9ELMChZniWdkUWh,San Fco Xochiteopan,Nuclear,5+ veces,Carro (alguien me lleva),Medio difícil,Todo,Muy difícil,Mucha confianza,M,0,180,3,79,0,0,private
+17,R_5fn1A8UR7ITRnvf,San Fco Xochiteopan,Soltero/a,1-2 veces,Carro (alguien me lleva),Medio difícil,Todo,Medio difícil,Poca confianza,F,0,60,1,74,0,0,private
+18,R_0Thy6e5W9LOkKLw,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,120,5,36,1,0,private
+19,R_bx7KHNWLgc09LQv,San Fco Xochiteopan,Nuclear,3-4 veces,Autobús,Muy difícil,Todo,Muy difícil,Poca confianza,M,0,90,3,59,1,1,public
+20,R_0xM003izrz6kXEu,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Muy difícil,Una parte,Muy difícil,Mucha confianza,F,0,5,3,50,1,1,public
+21,R_1yaakAuUoqA2L6B,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Nada difícil,Una parte,Medio difícil,Mucha confianza,F,0,5,5,38,0,1,public
+22,R_4X8ziWbWpWIMXki,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Medio difícil,"No, nada",NA,Poca confianza,F,0,5,3,19,0,1,public
+23,R_aakRpTayANMV1Ps,San Fco Xochiteopan,Nuclear y compuesta,1-2 veces,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,0,5,6,20,0,1,public
+24,R_kZeglHqYTwqMX6N,San Fco Xochiteopan,Extendida,1-2 veces,Carro/caminioneta (propio),Un poco difícil,Todo,Muy difícil,Mucha confianza,M,0,45,3,72,0,0,private
+25,R_3qKMNlTeAFUhcWX,San Fco Xochiteopan,Nuclear,Ninguna vez,Carro/caminioneta (propio),Un poco difícil,Todo,Muy difícil,Poca confianza,M,0,60,4,40,0,0,private
+26,R_iJCZlq4uBVFR2fo,San Fco Xochiteopan,Extendida,1-2 veces,Combi,Nada difícil,"No, nada",NA,Mucha confianza,F,0,5,NA,53,0,0,private
+27,R_8DK4PBZ3dgcqlpu,San Fco Xochiteopan,Nuclear,1-2 veces,Transporte rentado,Muy difícil,Todo,Muy difícil,Poca confianza,M,0,45,4,50,1,0,private
+28,R_1sZSVU0vPr87GeB,San Fco Xochiteopan,Nuclear y compuesta,3-4 veces,Caminando,Un poco difícil,"No, nada",NA,Mucha confianza,F,0,10,4,47,0,1,public
+29,R_ehLyrfmdpEWrcla,San Fco Xochiteopan,Nuclear,Ninguna vez,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,60,3,46,1,0,private
+30,R_ff07Nc8qsuxMHz0,San Fco Xochiteopan,Nuclear,Ninguna vez,Carro (alguien me lleva),Un poco difícil,Todo,Muy difícil,Mucha confianza,M,0,45,4,58,0,1,public
+31,R_eP7kLlCOBjDVRwl,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Nada difícil,Una parte,Un poco difícil,Poca confianza,F,0,5,3,18,0,1,public
+32,R_o65THCIH3wZ8nUq,San Fco Xochiteopan,Nuclear y compuesta,1-2 veces,Caminando,Muy difícil,Todo,Muy difícil,Nada de confianza,F,0,60,5,24,1,0,private
+33,R_2o5D3oEMdiglI5r,San Fco Xochiteopan,Nuclear,1-2 veces,Combi,Un poco difícil,Todo,Muy difícil,Mucha confianza,M,0,1440,3,23,0,1,public
+34,R_naom0Q5lqShEAmb,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Un poco difícil,Todo,Muy difícil,Mucha confianza,F,0,5,1,75,0,1,public
+35,R_9gRKhUhA08uzun5,San Fco Xochiteopan,Extendida,5+ veces,Combi,Muy difícil,Una parte,Muy difícil,Poca confianza,F,0,60,4,33,1,1,public
+36,R_4nurxJ06WnQ2THw,San Fco Xochiteopan,Nuclear,Ninguna vez,Combi,Medio difícil,Todo,Muy difícil,Poca confianza,M,0,60,4,57,0,1,public
+37,R_93hcq1HbxJzvB7s,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Un poco difícil,Todo,Muy difícil,Mucha confianza,M,0,10,3,74,0,0,private
+38,R_4xNwtfKFRNcm6ZS,San Fco Xochiteopan,Nuclear y compuesta,1-2 veces,Caminando,Un poco difícil,"No, nada",NA,Poca confianza,F,0,5,9,37,0,1,public
+39,R_0mHToX4utWgNKqC,San Fco Xochiteopan,Nuclear,1-2 veces,Carro/caminioneta (propio),Medio difícil,Todo,Muy difícil,Poca confianza,M,0,20,4,36,0,0,private
+40,R_lfS6Luxi9cFxCyT,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,NA,Una parte,Muy difícil,Poca confianza,M,0,5,3,67,NA,1,public
+41,R_mMXSZiLk8UUGk3w,San Fco Xochiteopan,Soltero/a,1-2 veces,Combi,Muy difícil,Todo,Muy difícil,Poca confianza,F,0,40,1,70,1,0,private
+42,R_iZUFZyw8ZvPtFcf,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Muy difícil,Todo,Muy difícil,Mucha confianza,M,0,60,3,70,1,0,private
+43,R_aU561j04OJOS4Gp,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Un poco difícil,"No, nada",NA,Poca confianza,F,0,10,3,38,0,1,public
+44,R_9TfLbEvq7vFvdXs,San Fco Xochiteopan,Nuclear y compuesta,3-4 veces,Caminando,Nada difícil,Una parte,Medio difícil,Poca confianza,F,0,5,7,50,0,1,public
+45,R_6ki2mH98ojSdwux,San Fco Xochiteopan,Nuclear y compuesta,3-4 veces,Carro (alguien me lleva),Medio difícil,Una parte,Un poco difícil,Mucha confianza,F,0,60,3,20,0,0,private
+46,R_0eV1Q2kKydkU1Iq,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,0,6,2,56,0,1,public
+47,R_48wfYTW9TYYLCp9,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Muy difícil,"No, nada",NA,Poca confianza,F,0,20,4,28,1,1,public
+48,R_0ATu8PVgp2tPlAm,San Fco Xochiteopan,Nuclear,5+ veces,Caminando,Un poco difícil,Una parte,Un poco difícil,Mucha confianza,F,0,10,3,22,0,1,public
+49,R_ob6JXrBbM4PiE9R,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,15,3,22,1,0,private
+50,R_lHD5iw2XHuHmmyt,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Medio difícil,Todo,Muy difícil,Poca confianza,F,0,20,2,37,0,1,public
+51,R_lEpOWMSaX9wOk8M,San Fco Xochiteopan,Extendida y Compuesta,1-2 veces,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,M,0,300,5,55,1,0,private
+52,R_cvvAOc4XNSo4bYm,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Medio difícil,Una parte,Medio difícil,Mucha confianza,M,0,5,5,41,0,1,public
+53,R_2ZEqq8h8qLlYQp1,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Muy difícil,"No, nada",NA,Poca confianza,F,0,30,5,39,1,1,public
+54,R_jXkY3X3MBzT0oKP,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Nada difícil,Una parte,Nada difícil,No sé o prefiero no responder,F,0,60,3,NA,0,0,private
+55,R_bsDgrjToDdxRcH0,San Fco Xochiteopan,Nuclear,Ninguna vez,Transporte rentado,Muy difícil,Todo,Muy difícil,Poca confianza,F,0,30,3,25,1,0,private
+56,R_gnpvh5le6FiPHPh,San Fco Xochiteopan,Soltero/a,Ninguna vez,Combi,Un poco difícil,Todo,Nada difícil,Mucha confianza,F,0,2,1,78,0,0,private
+57,R_n5fhuEe2z9fzJia,San Fco Xochiteopan,Nuclear,Ninguna vez,Carro/caminioneta (propio),Un poco difícil,Todo,Muy difícil,Mucha confianza,F,0,30,5,46,0,0,private
+58,R_05dgmMPJCEcZFML,San Fco Xochiteopan,Nuclear,1-2 veces,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,30,4,30,1,0,private
+59,R_0jkEDHLAUA4TGyF,San Fco Xochiteopan,Nuclear,Ninguna vez,Transporte rentado,Medio difícil,Todo,Muy difícil,Mucha confianza,M,0,30,2,56,0,0,private
+60,R_jjf0StVzCMAg4Nr,San Fco Xochiteopan,Nuclear,3-4 veces,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Poca confianza,F,0,60,1,63,1,0,private
+61,R_8khfUgzj8Bo596s,San Fco Xochiteopan,Nuclear,Ninguna vez,Carro (alguien me lleva),Medio difícil,Todo,Muy difícil,Poca confianza,F,0,20,7,34,0,0,private
+62,R_m0zYRcPWJKvxHmz,San Fco Xochiteopan,Extendida,Ninguna vez,Carro (alguien me lleva),Nada difícil,Todo,Muy difícil,Mucha confianza,F,0,10,6,86,0,0,private
+63,R_i8WIqMK9JnBYlAe,San Fco Xochiteopan,Extendida,1-2 veces,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,90,2,77,1,1,public
+64,R_oFhySkh7AcqS5FJ,San Fco Xochiteopan,Extendida,5+ veces,Caminando,Un poco difícil,Todo,Medio difícil,Poca confianza,F,0,20,7,25,0,1,public
+65,R_dGjT9RiccRRvxKh,San Fco Xochiteopan,Soltero/a,1-2 veces,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,15,1,72,1,0,private
+66,R_94HtTJQYWkgUQI7,San Fco Xochiteopan,Nuclear,Ninguna vez,Caminando,Muy difícil,"No, nada",NA,Mucha confianza,F,0,60,9,33,1,1,public
+67,R_8UJYfe3Y8cyEUVa,San Fco Xochiteopan,Nuclear,1-2 veces,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,60,5,40,1,0,private
+68,R_6aLNCaLvC9HUl1p,San Fco Xochiteopan,Nuclear,3-4 veces,Carro (alguien me lleva),Muy difícil,Una parte,Muy difícil,Mucha confianza,F,0,60,3,75,1,1,public
+69,R_fdYh5c3W9hX6xJB,San Fco Xochiteopan,Soltero/a,1-2 veces,Combi,Muy difícil,Una parte,Muy difícil,Poca confianza,F,0,90,1,64,1,1,public
+70,R_aPxavP9MVSTzZ1q,San Fco Xochiteopan,Nuclear,5+ veces,Combi,Medio difícil,Todo,Medio difícil,Mucha confianza,F,0,360,2,71,0,0,private
+71,R_gYENJhYGXjZH1Ss,San Fco Xochiteopan,Nuclear,Ninguna vez,Caminando,Un poco difícil,"No, nada",NA,Mucha confianza,F,0,10,5,33,0,1,public
+72,R_kxWnoQfIXiZaWDT,San Fco Xochiteopan,Nuclear,1-2 veces,Caminando,Un poco difícil,"No, nada",NA,Mucha confianza,F,0,10,3,47,0,1,public
+73,R_5d8pKDLWIu1Uhfg,San Fco Xochiteopan,Extendida,Ninguna vez,Carro/caminioneta (propio),Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,7,5,40,0,0,private
+74,R_68N6E9HtoEELRE4,San Fco Xochiteopan,Nuclear,3-4 veces,Transporte rentado,Muy difícil,Una parte,Muy difícil,Poca confianza,F,0,60,6,32,1,1,public
+75,R_6hVFJcnmukQGIBR,San Fco Xochiteopan,Extendida,3-4 veces,Carro (alguien me lleva),Muy difícil,Todo,Medio difícil,Mucha confianza,F,0,30,8,55,1,0,private
+76,R_cXNjHraBs4F59FN,San Fco Xochiteopan,Extendida,1-2 veces,Caminando,Nada difícil,"No, nada",NA,Poca confianza,F,0,10,5,25,0,1,public
+77,R_jvLC3FetzydRms9,San Fco Xochiteopan,Extendida,Ninguna vez,Caminando,Medio difícil,Una parte,Muy difícil,Mucha confianza,F,0,10,7,55,0,0,private
+78,R_1v1GkzRBh5qg2Pw,San Fco Xochiteopan,Soltero/a,1-2 veces,Carro/caminioneta (propio),Nada difícil,Todo,Nada difícil,Mucha confianza,F,0,30,1,77,0,0,private
+79,R_dBqUFCDiSbSjT1b,San Fco Xochiteopan,Nuclear,3-4 veces,Caminando,Muy difícil,"No, nada",NA,Mucha confianza,F,0,20,6,40,1,1,public
+80,R_jzboVh4bROXV66h,San Fco Xochiteopan,Nuclear,5+ veces,Combi,Medio difícil,"No, nada",NA,Mucha confianza,F,0,100,5,36,0,NA,NA
+81,R_orRfzFiT9oGKUWh,Colonia Agrarista,Nuclear,1-2 veces,Combi,Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,30,4,48,0,0,private
+82,R_hhLe4KaptRwfzL8,Colonia Agrarista,Soltero/a,1-2 veces,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Mucha confianza,M,0,60,1,61,1,1,public
+83,R_mTfNhKGYooHnqld,Colonia Agrarista,Soltero/a,Ninguna vez,Carro (alguien me lleva),Muy difícil,"No, nada",NA,Mucha confianza,M,0,10,1,51,1,1,public
+84,R_dDXHClcxk936GB1,Colonia Agrarista,Nuclear,Ninguna vez,Carro (alguien me lleva),Medio difícil,Todo,Nada difícil,Mucha confianza,F,0,180,1,79,0,0,private
+85,R_6DMlY24G5hyapY2,Colonia Agrarista,Nuclear,3-4 veces,Carro (alguien me lleva),Muy difícil,"No, nada",NA,Mucha confianza,F,0,10,3,76,1,1,public
+86,R_bh58NKnGiX89TSv,Colonia Agrarista,Soltero/a,Ninguna vez,Caminando,Nada difícil,Una parte,Nada difícil,Mucha confianza,F,0,30,1,49,0,1,public
+87,R_haLB4zLur4Bo2jU,Colonia Agrarista,Nuclear,3-4 veces,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,120,2,65,1,0,private
+88,R_ePj2IYGBGBS2b4I,Colonia Agrarista,Nuclear,1-2 veces,Caminando,Un poco difícil,Una parte,Un poco difícil,Poca confianza,F,0,30,2,22,0,1,public
+89,R_4mYY4jMn0KPzWy7,Colonia Agrarista,Extendida,3-4 veces,Caminando,Nada difícil,Todo,Un poco difícil,Mucha confianza,F,0,75,3,61,0,1,public
+90,R_kmBkvlIkqTRivp9,Colonia Agrarista,Nuclear,1-2 veces,Carro (alguien me lleva),Medio difícil,"No, nada",NA,Mucha confianza,F,0,20,3,19,0,0,private
+91,R_l0kRQyoq5YprO2H,Colonia Agrarista,Nuclear,Ninguna vez,NA,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,120,3,43,1,0,private
+92,R_2IpNKsDNjVy5tkV,Colonia Agrarista,Nuclear y compuesta,1-2 veces,Carro/caminioneta (propio),Muy difícil,Una parte,Un poco difícil,Mucha confianza,F,0,15,3,48,1,1,public
+93,R_6DWS17gFriaqYjg,Colonia Agrarista,Extendida,1-2 veces,NA,Medio difícil,"No, nada",NA,Mucha confianza,F,0,10,5,21,0,1,public
+94,R_mAeLqzNuSUeQgyO,Colonia Agrarista,Nuclear,Ninguna vez,Caminando,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,40,8,45,1,1,public
+95,R_4VCCCirC84VGkpZ,Colonia Agrarista,Nuclear,3-4 veces,Carro (alguien me lleva),Un poco difícil,"No, nada",NA,Mucha confianza,M,0,30,2,65,0,1,public
+96,R_dKPySVUowBUNhUg,Colonia Agrarista,Nuclear,1-2 veces,Caminando,Nada difícil,"No, nada",NA,Poca confianza,F,0,30,7,41,0,1,public
+97,R_8rsjasMhXmsVScK,Colonia Agrarista,Nuclear,5+ veces,Combi,Un poco difícil,Todo,Muy difícil,Mucha confianza,F,0,90,4,20,0,1,public
+98,R_4i0zq8ZhtIjZp7t,Colonia Agrarista,Nuclear,3-4 veces,Combi,Medio difícil,Una parte,Un poco difícil,Nada de confianza,F,0,60,4,34,0,1,public
+99,R_3pmM9BmTZHcCJI1,Colonia Agrarista,Nuclear,Ninguna vez,Caminando,Medio difícil,"No, nada",NA,Mucha confianza,F,0,45,4,39,0,1,public
+100,R_8pxENsLHvrrGoRQ,Colonia Agrarista,Nuclear,1-2 veces,Caminando,Muy difícil,"No, nada",NA,Mucha confianza,F,0,60,3,42,1,1,public
+101,R_eaSeBiHlqMXvY2A,Colonia Agrarista,Soltero/a,Ninguna vez,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,0,30,5,36,0,1,public
+102,R_ce4ghYeQQONE0iU,Colonia Agrarista,Nuclear,Ninguna vez,Caminando,Muy difícil,"No, nada",NA,Mucha confianza,F,0,90,2,62,1,1,public
+103,R_2YeSuOowE9T29ij,Colonia Agrarista,Nuclear,3-4 veces,Caminando,Muy difícil,Una parte,Muy difícil,Nada de confianza,F,0,20,4,30,1,1,public
+104,R_5GJWz012yHckXl6,Colonia Agrarista,Nuclear,1-2 veces,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,60,2,55,1,0,private
+105,R_8JBOLrxFb25FH53,Colonia Agrarista,Nuclear,Ninguna vez,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,60,4,39,1,0,private
+106,R_maoIjT4iDFnypEU,Colonia Agrarista,Soltero/a,1-2 veces,Carro/caminioneta (propio),Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,60,2,47,0,0,private
+107,R_2JeoZZe0deLgaPt,Colonia Agrarista,Nuclear,3-4 veces,Carro/caminioneta (propio),Medio difícil,Una parte,Muy difícil,Mucha confianza,F,0,90,2,75,0,0,private
+108,R_9xyML75jw1yob6a,Colonia Agrarista,Nuclear,1-2 veces,Caminando,Muy difícil,"No, nada",NA,Mucha confianza,F,0,30,4,23,1,1,public
+109,R_38qcSzSBchTQH4k,Colonia Agrarista,Nuclear,Ninguna vez,Carro (alguien me lleva),Medio difícil,"No, nada",NA,Poca confianza,M,0,15,1,25,0,1,public
+110,R_ivYoAYc9M8ZgHz1,Colonia Agrarista,Nuclear y compuesta,Ninguna vez,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,30,4,44,1,0,private
+111,R_iRZYArtSWwP0Ifq,Colonia Agrarista,Nuclear,1-2 veces,Carro/caminioneta (propio),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,20,5,39,1,1,public
+112,R_dWPefdHM2l067vI,Colonia Agrarista,Nuclear,1-2 veces,Caminando,Medio difícil,Una parte,Un poco difícil,Poca confianza,F,0,20,5,45,0,1,public
+113,R_aNkiug3DV9u3f3d,Colonia Agrarista,Nuclear,Ninguna vez,Caminando,Un poco difícil,"No, nada",NA,Poca confianza,F,0,45,5,59,0,1,public
+114,R_mpsofn9iuRoLDyO,Colonia Agrarista,Extendida,Ninguna vez,Caminando,Medio difícil,Una parte,Medio difícil,Poca confianza,F,0,30,6,55,0,1,public
+115,R_bmkh9MhBTmIRnkn,Colonia Agrarista,Extendida y Compuesta,Ninguna vez,Carro (alguien me lleva),Medio difícil,Todo,Muy difícil,Poca confianza,M,0,30,6,29,0,0,private
+116,R_fG2U4fT0vq1H33T,Colonia Agrarista,Extendida y Compuesta,1-2 veces,Carro (alguien me lleva),Medio difícil,Todo,Medio difícil,Mucha confianza,F,0,30,6,39,0,0,private
+117,R_cTNoLNSBbtDq12j,Colonia Agrarista,Extendida,1-2 veces,Carro/caminioneta (propio),Muy difícil,Todo,Muy difícil,Poca confianza,F,0,30,5,61,1,0,private
+118,R_iOddbXFwSWCVafg,Colonia Agrarista,Nuclear,Ninguna vez,Carro (alguien me lleva),Medio difícil,Todo,Medio difícil,Mucha confianza,M,0,30,4,41,0,0,private
+119,R_29QPYjTEBcJGlVW,Colonia Agrarista,Nuclear,5+ veces,Combi,Muy difícil,Todo,Muy difícil,Poca confianza,F,0,120,7,33,1,1,public
+120,R_7Z9jvPrpcYEF4ad,Colonia Agrarista,Nuclear y compuesta,Ninguna vez,Carro (alguien me lleva),Medio difícil,Todo,Muy difícil,Mucha confianza,M,0,60,2,70,0,0,private
+121,R_ceDKgzxvpGMBGjN,Colonia Agrarista,Extendida,1-2 veces,Combi,Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,60,4,63,0,0,private
+122,R_omNQkzR8aaHlDm4,Colonia Agrarista,Extendida,1-2 veces,Caminando,Un poco difícil,"No, nada",NA,Mucha confianza,F,0,30,5,42,0,1,public
+123,R_2hg9WOugM7dszEi,Colonia Agrarista,Nuclear y compuesta,1-2 veces,Carro (alguien me lleva),Medio difícil,"No, nada",NA,Mucha confianza,F,0,200,7,78,0,1,public
+124,R_djyiY1tqxa55fnS,Colonia Agrarista,Nuclear,1-2 veces,Carro (alguien me lleva),Un poco difícil,Todo,Medio difícil,Mucha confianza,F,0,30,2,62,0,0,private
+125,R_0uf59x9amuUFmTX,Colonia Agrarista,Nuclear y compuesta,1-2 veces,Caminando,Nada difícil,Una parte,Medio difícil,Mucha confianza,F,0,30,4,25,0,1,public
+126,R_26D1qKrsppLjLSD,Colonia Agrarista,Nuclear,Ninguna vez,Caminando,Un poco difícil,"No, nada",NA,Mucha confianza,F,0,30,2,76,0,1,public
+127,R_55fFCcGTopKeIRb,Colonia Agrarista,NA,NA,NA,NA,NA,NA,NA,NA,0,NA,NA,NA,NA,NA,NA
+128,R_oteHw0GsyLeu5yB,Colonia Agrarista,Extendida,Ninguna vez,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,60,5,43,1,0,private
+129,R_mwUhSTg55sNdqLu,Colonia Agrarista,Nuclear,1-2 veces,Carro/caminioneta (propio),Nada difícil,Todo,Un poco difícil,Mucha confianza,F,0,15,4,56,0,0,private
+130,R_cMKhNu6QMyVtz5n,Santa Ana Coatepec,Nuclear y compuesta,5+ veces,Carro/caminioneta (propio),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,30,5,78,1,0,private
+131,R_6jSNrCtR12v0HFG,Santa Ana Coatepec,Nuclear y compuesta,5+ veces,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,15,7,42,1,0,private
+132,R_oxajuudZEW4X3ej,Santa Ana Coatepec,Nuclear,Ninguna vez,Carro/caminioneta (propio),Muy difícil,Todo,Medio difícil,Mucha confianza,F,0,30,4,55,1,1,public
+133,R_k3MWahLBt1ZLRZ6,Santa Ana Coatepec,Soltero/a,1-2 veces,Autobús,Nada difícil,Todo,Muy difícil,Mucha confianza,F,0,15,1,71,0,0,private
+134,R_9mDIJzSEhkeUb3L,Santa Ana Coatepec,Extendida,1-2 veces,Carro/caminioneta (propio),Nada difícil,Todo,Medio difícil,Mucha confianza,F,0,15,7,54,0,0,private
+135,R_9WFyLKibDmJU9re,Santa Ana Coatepec,Nuclear,3-4 veces,Combi,Medio difícil,"No, nada",NA,Poca confianza,M,0,120,3,39,0,1,public
+136,R_1cH6mpVItsT72Sq,Santa Ana Coatepec,Extendida,5+ veces,Caminando,Nada difícil,Una parte,Nada difícil,Mucha confianza,F,0,5,2,40,0,1,public
+137,R_71qxMgS8FiMdQ8s,Santa Ana Coatepec,Nuclear,Ninguna vez,Combi,Medio difícil,"No, nada",NA,Mucha confianza,F,0,30,2,30,0,1,public
+138,R_8OLJt7r7i5QHVUT,Santa Ana Coatepec,Nuclear,1-2 veces,Caminando,Un poco difícil,Una parte,Nada difícil,Mucha confianza,F,0,20,3,52,0,NA,NA
+139,R_0DMYcgMkj6PsWMI,Santa Ana Coatepec,Nuclear,5+ veces,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,M,0,30,5,49,1,0,private
+140,R_2s97YkjgpONxmVl,Santa Ana Coatepec,Nuclear y compuesta,5+ veces,Combi,Medio difícil,Todo,Medio difícil,Mucha confianza,M,0,30,3,55,0,0,private
+141,R_eOihWZaSrPCDILj,Santa Ana Coatepec,Nuclear,Ninguna vez,Carro/caminioneta (propio),Un poco difícil,Todo,Medio difícil,Mucha confianza,F,0,20,4,39,0,0,private
+142,R_0SHSjcvbO0PO2Ln,Santa Ana Coatepec,Nuclear y compuesta,3-4 veces,Autobús,Un poco difícil,"No, nada",NA,Mucha confianza,M,0,120,4,69,0,1,public
+143,R_caTcWTl0r4z99vk,Santa Ana Coatepec,Extendida,1-2 veces,Carro/caminioneta (propio),Un poco difícil,Todo,Medio difícil,Mucha confianza,M,0,10,6,51,0,0,private
+144,R_jVug50SZPk33qbX,Santa Ana Coatepec,Nuclear,3-4 veces,Combi,Medio difícil,Todo,Medio difícil,Mucha confianza,F,0,20,7,60,0,0,private
+145,R_oe6VjL0gtrdyANC,Santa Ana Coatepec,Extendida y Compuesta,1-2 veces,Combi,Medio difícil,Todo,Un poco difícil,Mucha confianza,M,0,40,7,44,0,0,private
+146,R_mF3sHr2nB0XTcGF,Santa Ana Coatepec,Extendida,Ninguna vez,Caminando,Medio difícil,"No, nada",NA,Poca confianza,M,0,10,4,72,0,NA,NA
+147,R_a711PDro8JRD11h,Santa Ana Coatepec,Nuclear,Ninguna vez,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,M,0,8,2,65,0,1,public
+148,R_9ExuAKItCvY4Rzj,Santa Ana Coatepec,Extendida y Compuesta,1-2 veces,Caminando,Medio difícil,"No, nada",NA,Poca confianza,F,0,15,8,18,0,1,public
+149,R_lN4PGjlAWOm2f77,Santa Ana Coatepec,Soltero/a,Ninguna vez,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,0,10,1,68,0,1,public
+150,R_hQz2ab3hgOw714W,Colonia Agrarista,Nuclear y compuesta,3-4 veces,Carro (alguien me lleva),Muy difícil,Una parte,Muy difícil,Mucha confianza,M,0,120,5,67,1,NA,NA
+151,R_eBYRZj58SLoPFjX,Colonia Agrarista,Nuclear y compuesta,Ninguna vez,Carro (alguien me lleva),Muy difícil,Una parte,Muy difícil,Mucha confianza,F,0,20,6,36,1,1,public
+152,R_6U6eqvJocNhhDLy,Colonia Agrarista,Nuclear,3-4 veces,Caminando,Medio difícil,Una parte,Medio difícil,Mucha confianza,M,0,60,4,72,0,1,public
+153,R_jRBPYo6yJpyt3ae,Colonia Agrarista,Soltero/a,1-2 veces,Caminando,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,120,1,82,1,NA,NA
+154,R_luKwgbEDKCKiRfq,Colonia Agrarista,Nuclear,1-2 veces,Carro (alguien me lleva),Muy difícil,Una parte,Muy difícil,Mucha confianza,F,0,60,2,64,1,1,public
+155,R_kpcHAAPrS0kNNNc,Colonia Agrarista,Extendida,Ninguna vez,Caminando,Muy difícil,Una parte,Muy difícil,Poca confianza,F,0,30,6,55,1,0,private
+156,R_bGgzIY5e9k4cvNQ,Santa Ana Coatepec,Nuclear,5+ veces,Combi,Muy difícil,Todo,Muy difícil,Poca confianza,F,0,30,3,70,1,0,private
+157,R_3WaIK6lcIMwnZeE,Santa Ana Coatepec,Extendida y Compuesta,Ninguna vez,Caminando,Medio difícil,"No, nada",NA,Mucha confianza,F,0,30,4,34,0,1,public
+158,R_3CaR1OcCVIdqc5v,Santa Ana Coatepec,Extendida,1-2 veces,Combi,Un poco difícil,Todo,Medio difícil,Mucha confianza,F,0,30,8,55,0,0,private
+159,R_brz2V8aUABADdzT,Santa Ana Coatepec,Nuclear,Ninguna vez,Carro/caminioneta (propio),Un poco difícil,"No, nada",NA,Mucha confianza,F,0,15,6,24,0,1,public
+160,R_6zPaunpXKzQayeB,Santa Ana Coatepec,Nuclear y compuesta,Ninguna vez,Combi,Medio difícil,Una parte,Medio difícil,Poca confianza,M,0,7,6,53,0,1,public
+161,R_cbJfYHssL45pU3r,Santa Ana Coatepec,Extendida,3-4 veces,Combi,Un poco difícil,Una parte,Medio difícil,Mucha confianza,F,0,20,3,43,0,NA,NA
+162,R_lDSZqJdwHfqpk0N,Santa Ana Coatepec,Nuclear,Ninguna vez,Carro/caminioneta (propio),Un poco difícil,Todo,Un poco difícil,Mucha confianza,M,0,15,2,48,0,0,private
+163,R_4aEwIJ4CnFJbHzX,Santa Ana Coatepec,Nuclear,Ninguna vez,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,30,2,59,1,1,public
+164,R_fUgNvmtPwsOCQGI,Santa Ana Coatepec,Extendida y Compuesta,1-2 veces,Carro/caminioneta (propio),Medio difícil,Todo,No sé o prefiero no responder,Mucha confianza,F,0,180,5,90,0,1,public
+165,R_k7pTbaLJIFk1Xic,Santa Ana Coatepec,Nuclear,1-2 veces,Caminando,Medio difícil,Una parte,Un poco difícil,Poca confianza,F,0,15,8,36,0,1,public
+166,R_0wXpnUCr0MoIWyH,Santa Ana Coatepec,Nuclear,Ninguna vez,Combi,Un poco difícil,Todo,Un poco difícil,Mucha confianza,M,0,10,2,72,0,0,private
+167,R_aEqhR2NmUMzNCRh,Santa Ana Coatepec,Nuclear,1-2 veces,Combi,Nada difícil,Todo,Muy difícil,Mucha confianza,F,0,45,3,59,0,0,private
+168,R_h8YmH2JnIJFxzdi,Santa Ana Coatepec,Extendida,3-4 veces,Combi,Nada difícil,Una parte,Muy difícil,Mucha confianza,F,0,60,6,29,0,1,public
+169,R_8Ha8L6bQqMGjsJY,Santa Ana Coatepec,Nuclear,1-2 veces,Combi,Medio difícil,Una parte,Un poco difícil,Mucha confianza,F,0,20,2,57,0,0,private
+170,R_ividSIOmZ0lqAvG,Santa Ana Coatepec,Nuclear,3-4 veces,Combi,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,30,4,39,1,0,private
+171,R_42ZmNPXHdxiT1FY,Santa Ana Coatepec,Nuclear,Ninguna vez,Caminando,Nada difícil,Una parte,Nada difícil,Mucha confianza,M,0,3,3,75,0,1,public
+172,R_le11w8It3dhGR8Q,Santa Ana Coatepec,Extendida,1-2 veces,Carro/caminioneta (propio),Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,5,8,38,1,0,private
+173,R_5OfRvixju6XAR5u,Santa Ana Coatepec,Soltero/a,3-4 veces,Transporte rentado,Muy difícil,Todo,Muy difícil,Mucha confianza,F,0,120,1,64,1,0,private
+174,R_fZGyAzi82MzLIkL,Santa Ana Coatepec,Nuclear,Ninguna vez,Combi,Muy difícil,"No, nada",NA,Nada de confianza,M,0,30,2,56,1,1,public
+175,R_a88hlltfY1Buwqm,Santa Ana Coatepec,Nuclear,Ninguna vez,Caminando,Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,15,3,47,0,1,public
+176,R_kjI2uv8bNMOlbSn,Santa Ana Coatepec,Extendida,3-4 veces,Combi,Muy difícil,Una parte,Medio difícil,Mucha confianza,F,0,20,2,52,1,1,public
+177,R_8M5HxTBkHfgGn7c,Santa Ana Coatepec,Soltero/a,Ninguna vez,Combi,Medio difícil,"No, nada",NA,Mucha confianza,F,0,10,1,61,0,1,public
+178,R_kfvLiEQi7ZR5AjN,Santa Ana Coatepec,Nuclear,3-4 veces,Carro/caminioneta (propio),Nada difícil,Todo,Un poco difícil,Mucha confianza,M,0,10,2,55,0,0,private
+179,R_gGgtmMaf2FWa7Y8,Santa Ana Coatepec,Nuclear,3-4 veces,Carro/caminioneta (propio),Un poco difícil,Todo,Medio difícil,Mucha confianza,M,0,15,5,54,0,0,private
+180,R_5tXkaIqT51QqHxD,Santa Ana Coatepec,Nuclear,Ninguna vez,Combi,Nada difícil,Todo,Medio difícil,No sé o prefiero no responder,F,0,15,2,65,0,0,private
+181,R_ft38435SOVcoIfX,Santa Ana Coatepec,Soltero/a,Ninguna vez,Caminando,Un poco difícil,"No, nada",NA,Mucha confianza,F,0,20,1,75,0,1,public
+182,R_fgboiWb72zCmxEU,Santa Ana Coatepec,Extendida,3-4 veces,Carro/caminioneta (propio),Medio difícil,Todo,Muy difícil,Mucha confianza,M,0,10,4,73,0,0,private
+183,R_fJvTUPNtCLMstUa,Santa Ana Coatepec,Extendida,1-2 veces,Caminando,Nada difícil,"No, nada",NA,Poca confianza,F,0,10,4,22,0,1,public
+184,R_clpVzviyT9wiiCJ,Santa Ana Coatepec,Extendida y Compuesta,Ninguna vez,Caminando,Medio difícil,Una parte,Medio difícil,Nada de confianza,F,0,5,NA,55,0,1,public
+185,R_1DMJtFHLIOkxkda,Santa Ana Coatepec,Nuclear y compuesta,1-2 veces,Combi,Nada difícil,"No, nada",NA,Mucha confianza,F,0,15,5,63,0,1,public
+186,R_i4eaCEMZbzamESH,Santa Ana Coatepec,Nuclear y compuesta,3-4 veces,Caminando,Nada difícil,Una parte,Medio difícil,Mucha confianza,F,0,20,NA,28,0,1,public
+187,R_g9G9M7XCNRfgk27,Santa Ana Coatepec,Nuclear,1-2 veces,Caminando,Medio difícil,Una parte,Medio difícil,Poca confianza,F,0,60,2,62,0,0,private
+188,R_46eP7RaHjQooXGV,Santa Ana Coatepec,Nuclear,3-4 veces,Combi,Un poco difícil,Una parte,Muy difícil,Mucha confianza,M,0,20,3,45,0,0,private
+189,R_iwhwhnAwZ9as4fJ,Santa Ana Coatepec,Nuclear,Ninguna vez,Combi,Un poco difícil,Una parte,Un poco difícil,Nada de confianza,M,0,30,5,36,0,0,private
+190,R_6mYb9ECyhkXwB1d,Santa Ana Coatepec,Extendida,1-2 veces,Combi,Medio difícil,Todo,Un poco difícil,Mucha confianza,F,0,30,6,59,0,0,private
+191,R_8JeXm7WuxwmOuTV,Santa Ana Coatepec,Nuclear,Ninguna vez,Caminando,Muy difícil,Una parte,Muy difícil,Mucha confianza,F,0,5,2,66,1,1,public
+192,R_901QVJ1Ni4kUTKd,Santa Ana Coatepec,Nuclear,1-2 veces,Carro/caminioneta (propio),Un poco difícil,Todo,Muy difícil,Mucha confianza,F,0,15,3,68,0,1,public
+193,R_h3x93pxego8q18s,Santa Ana Coatepec,Nuclear,1-2 veces,Combi,Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,45,4,53,0,0,private
+194,R_g742Td4JLC98N8l,Santa Ana Coatepec,Nuclear,1-2 veces,Combi,Medio difícil,Todo,Muy difícil,Mucha confianza,F,0,30,3,54,0,0,private
+195,R_247MRClHVstpdPa,Santa Ana Coatepec,Nuclear,Ninguna vez,Carro/caminioneta (propio),Nada difícil,Todo,Nada difícil,Mucha confianza,F,0,20,4,36,0,0,private
+196,R_nWUFOlH3gZFW72V,Colonia Flores Magon,Nuclear,Ninguna vez,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,1,5,3,30,0,1,public
+197,R_mdHaP3NX5zciKr8,Colonia Flores Magon,Nuclear,3-4 veces,Caminando,Medio difícil,"No, nada",NA,Poca confianza,M,1,5,4,68,0,1,public
+198,R_gUfD4lJNFuPHboD,Colonia Flores Magon,Nuclear,Ninguna vez,Caminando,Muy difícil,Una parte,Medio difícil,Nada de confianza,M,1,5,4,43,1,1,public
+199,R_5wVugfqF2G6GBrD,Colonia Flores Magon,Nuclear,1-2 veces,Caminando,Un poco difícil,"No, nada",NA,Mucha confianza,F,1,15,NA,74,0,1,public
+200,R_8EhWwyZVp96ElNH,Colonia Flores Magon,Nuclear,1-2 veces,Caminando,Medio difícil,"No, nada",NA,Nada de confianza,F,1,15,3,20,0,1,public
+201,R_n2aIOfrMJoJ4PyB,Colonia Flores Magon,Nuclear,5+ veces,Autobús,Muy difícil,Todo,Muy difícil,Nada de confianza,M,1,90,2,74,1,0,private
+202,R_oC4RJP32NyFmbr8,Colonia Flores Magon,Nuclear,1-2 veces,Combi,Nada difícil,Todo,Un poco difícil,Mucha confianza,F,1,30,4,43,0,0,private
+203,R_mXGMZ88zFnMDGkL,Colonia Flores Magon,Extendida,Ninguna vez,Combi,Nada difícil,Todo,Muy difícil,Mucha confianza,F,1,30,5,51,0,0,private
+204,R_nCi7adiiu2xTgbg,Colonia Flores Magon,Extendida y Compuesta,5+ veces,Combi,Nada difícil,Una parte,Medio difícil,Mucha confianza,F,1,20,NA,53,0,1,public
+205,R_mAEsH9MwU3f3pPu,Colonia Flores Magon,Nuclear,1-2 veces,Combi,Nada difícil,Todo,Nada difícil,Mucha confianza,F,1,20,2,41,0,0,private
+206,R_ndY7zCdpHdKN5Qs,Colonia Flores Magon,Soltero/a,3-4 veces,Combi,Muy difícil,Una parte,Muy difícil,Poca confianza,M,1,30,1,56,1,1,public
+207,R_hGApPogHFqmHSdw,Colonia Flores Magon,Nuclear,Ninguna vez,Combi,Un poco difícil,Todo,Un poco difícil,Mucha confianza,M,1,60,2,82,0,0,private
+208,R_itVBiSWjtkLdU46,Colonia Flores Magon,Nuclear,Ninguna vez,Caminando,Un poco difícil,"No, nada",NA,Poca confianza,F,1,5,5,45,0,1,public
+209,R_cG3RFiCR4NJYUy3,Colonia Flores Magon,Nuclear,3-4 veces,Carro/caminioneta (propio),Un poco difícil,"No, nada",NA,Mucha confianza,F,1,30,3,68,0,1,public
+210,R_jTSxn9bLTAMTtp8,Colonia Flores Magon,Nuclear,Ninguna vez,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,1,12,4,52,0,1,public
+211,R_7TZQI3SdauHBpKr,Colonia Flores Magon,Nuclear y compuesta,5+ veces,Caminando,Medio difícil,Una parte,Muy difícil,Poca confianza,F,1,10,7,51,0,1,public
+212,R_iKnxHavIN2ovAoW,Colonia Flores Magon,Nuclear y compuesta,1-2 veces,Carro (alguien me lleva),Nada difícil,"No, nada",NA,Mucha confianza,F,1,10,NA,42,0,1,public
+213,R_e2rL7McGMU8fBDD,Colonia Flores Magon,Soltero/a,Ninguna vez,Caminando,Medio difícil,Una parte,Medio difícil,Mucha confianza,F,1,10,1,52,0,1,public
+214,R_bFwnjIRzgT8lDvJ,Colonia Flores Magon,Extendida,Ninguna vez,Caminando,Medio difícil,Una parte,Un poco difícil,Mucha confianza,F,1,15,7,32,0,1,public
+215,R_hL6xbeBCbPBNPqE,Colonia Flores Magon,Extendida,5+ veces,Caminando,Muy difícil,Una parte,Muy difícil,Mucha confianza,F,1,15,NA,77,1,1,public
+216,R_gyv58FZrskbCFJP,Colonia Flores Magon,Extendida,5+ veces,Combi,Muy difícil,Una parte,Muy difícil,Mucha confianza,F,1,30,8,56,1,1,public
+217,R_i0k5L7yaGMaRaul,Colonia Flores Magon,Extendida,Ninguna vez,Combi,Medio difícil,Todo,Muy difícil,Mucha confianza,F,1,15,3,64,0,0,private
+218,R_6I0D6JY6S8tLc6L,Colonia Flores Magon,Extendida y Compuesta,3-4 veces,Combi,Medio difícil,Todo,Un poco difícil,Mucha confianza,F,1,15,3,70,0,0,private
+219,R_f74Xv6QxWxIITCr,Colonia Flores Magon,Extendida y Compuesta,3-4 veces,Carro/caminioneta (propio),Medio difícil,Todo,Un poco difícil,Mucha confianza,F,1,10,5,28,0,0,private
+220,R_5ndqSfyXvsptAfz,Colonia Flores Magon,Nuclear,1-2 veces,Combi,Medio difícil,Todo,Medio difícil,Mucha confianza,F,1,20,4,45,0,0,private
+221,R_4C1gPgvWy3qqE03,Colonia Flores Magon,Nuclear,3-4 veces,Caminando,Muy difícil,"No, nada",NA,Poca confianza,F,1,10,5,27,1,1,public
+222,R_gXBztHlJeuKGksb,Colonia Flores Magon,Nuclear,3-4 veces,Carro (alguien me lleva),Muy difícil,Todo,Muy difícil,Poca confianza,F,1,90,2,83,1,0,private
+223,R_lLcyx3Ak0pGbmtJ,Colonia Flores Magon,Nuclear,Ninguna vez,Carro/caminioneta (propio),Un poco difícil,Una parte,Muy difícil,Poca confianza,F,1,15,3,57,0,1,public
+224,R_8P4jkd9jEfie0DN,San Fco Xochiteopan,Extendida,Ninguna vez,Caminando,Nada difícil,"No, nada",NA,Poca confianza,F,0,10,6,56,0,1,public
+225,R_4r4OLavUAXniB8I,Colonia Flores Magon,Extendida y Compuesta,1-2 veces,Combi,Muy difícil,Todo,Medio difícil,Mucha confianza,F,1,5,5,38,1,0,private
+226,R_gd8vhmXJOhJjALN,Colonia Flores Magon,Nuclear y compuesta,Ninguna vez,Caminando,Muy difícil,Una parte,Medio difícil,Mucha confianza,F,1,20,3,68,1,1,public
+227,R_ow9u1x91TPrTDTA,Colonia Flores Magon,Nuclear,1-2 veces,Carro/caminioneta (propio),Nada difícil,Una parte,Un poco difícil,Mucha confianza,F,1,10,6,48,0,1,public
+228,R_5O1ea0IVTea0FRR,Colonia Flores Magon,Nuclear y compuesta,Ninguna vez,Caminando,Nada difícil,Todo,Un poco difícil,Mucha confianza,F,1,10,1,59,0,0,private
+229,R_n9MXlgvTRZhmyd6,Colonia Flores Magon,Nuclear,Ninguna vez,Caminando,Nada difícil,Todo,Medio difícil,Mucha confianza,F,1,15,3,60,0,0,private
+230,R_7d43hAZpnGoxS03,Colonia Flores Magon,Extendida,3-4 veces,Carro/caminioneta (propio),Nada difícil,"No, nada",NA,Mucha confianza,F,1,20,4,56,0,1,public
+231,R_2hEuokyncllD64j,Colonia Flores Magon,Extendida,1-2 veces,Caminando,Nada difícil,"No, nada",NA,Mucha confianza,F,1,15,6,47,0,1,public
+232,R_iDjUeFnT6raMAdQ,Colonia Flores Magon,Nuclear y compuesta,Ninguna vez,Caminando,Un poco difícil,Una parte,Muy difícil,Nada de confianza,F,1,15,5,53,0,1,public
+233,R_59KK8k0mBW7G9Xt,Colonia Flores Magon,Nuclear y compuesta,3-4 veces,Carro/caminioneta (propio),Medio difícil,Una parte,Muy difícil,Mucha confianza,F,1,60,4,39,0,1,public
+234,R_oBsgsRsa3pKihpa,Colonia Flores Magon,Nuclear y compuesta,Ninguna vez,Caminando,Un poco difícil,Todo,Un poco difícil,Mucha confianza,F,1,5,6,40,0,0,private
+235,R_hC67OLT1HrzIhua,Colonia Flores Magon,Nuclear,3-4 veces,Combi,Medio difícil,Una parte,Medio difícil,Poca confianza,M,1,15,2,75,0,1,public
+236,R_08BG76AATSNjM1o,Colonia Flores Magon,Nuclear,3-4 veces,Carro/caminioneta (propio),Medio difícil,Una parte,Medio difícil,Mucha confianza,M,1,10,3,34,0,1,public
+237,R_eP222Yu4Y9nX7HQ,Colonia Flores Magon,Nuclear y compuesta,5+ veces,Caminando,Muy difícil,Una parte,Muy difícil,Nada de confianza,M,1,5,6,38,1,1,public
+238,R_hBb2JwGOV8ASEwP,Colonia Flores Magon,Nuclear,1-2 veces,Combi,Medio difícil,Todo,Muy difícil,Poca confianza,F,1,30,4,45,0,0,private
+239,R_2ly6AN9X2XAr6HT,Colonia Flores Magon,Nuclear,3-4 veces,Caminando,Medio difícil,Una parte,Un poco difícil,Nada de confianza,F,1,15,2,64,0,1,public
+240,R_ccv1nJTdZAuEeQf,Colonia Flores Magon,Extendida,3-4 veces,Carro/caminioneta (propio),Medio difícil,Todo,Muy difícil,Mucha confianza,M,1,10,3,66,0,0,private
+241,R_aWKXxmjZZIWOtQo,Colonia Flores Magon,Nuclear,Ninguna vez,Combi,Muy difícil,Todo,Medio difícil,Mucha confianza,F,1,20,4,46,1,0,private
+242,R_asze6zlkemQfuHv,Colonia Flores Magon,Extendida,3-4 veces,Combi,Medio difícil,Todo,Muy difícil,Mucha confianza,F,1,30,7,37,0,0,private

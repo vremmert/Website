@@ -1,0 +1,2 @@
+"0","small_joined_data %>% group_by(urbanization_status) %>%"
+"0","  summarize(min(household_income))"

@@ -1,0 +1,7 @@
+install.packages("blogdown")
+blogdown::install_hugo()
+blogdown::new_site(theme="nurlansu/hugo-sustain")
+viewer <- getOption("viewer")
+viewer("http://localhost:8000")
+
+blogdown::serve_site()

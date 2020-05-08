@@ -1,0 +1,2 @@
+"0","small_joined_data %>% "
+"0","  summarize('minimum household income'= min(household_income))"

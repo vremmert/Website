@@ -1,0 +1,54 @@
+"0","joined_data<- health%>%full_join(crime,by=c(""County""=""county""))"
+"2","Column `County`/`county` joining factors with different levels, coercing to character vector"
+"0","glimpse(joined_data)"
+"1","Observations: 255
+"
+"1","Variables: 16
+"
+"1","$ County                     [3m[90m<chr>[39m[23m ""Anderson"", ""Andrews"", ""Angelina"", ""Aransas"", ""Archer"", ""Armstrong"", ""Atas…
+"
+"1",""
+"1","$ lifeexpectancy             [3m[90m<dbl>[39m[23m 73.8, 76.8, 76.3, 76.9, 77.0, 72.4, 78.3, 79.1, 78.4, 80.3, 77.6, 74.3, 76…
+"
+"1",""
+"1","$ frequentmentaldistressrate [3m[90m<int>[39m[23m 11, 10, 13, 12, 10, 10, 11, 11, 13, 11, 11, 12, 11, 11, 11, 11, 9, 11, 12,…
+"
+"1",""
+"1","$ mvmortalityrate            [3m[90m<int>[39m[23m 19, 43, 20, 19, 26, NA, 20, 22, 30, 24, 27, 55, 19, 15, 11, 20, NA, 25, 15…
+"
+"1",""
+"1","$ household_income           [3m[90m<int>[39m[23m 42412, 63451, 45318, 46970, 58311, 55337, 48636, 61111, 42045, 55578, 6299…
+"
+"1",""
+"1","$ householdiincome_black     [3m[90m<int>[39m[23m 24427, 38359, 28509, NA, NA, NA, 72827, 40096, NA, NA, 46866, NA, 41051, 4…
+"
+"1",""
+"1","$ householdincome_hispanic   [3m[90m<int>[39m[23m 37635, 66319, 41673, 43302, 34375, 150250, 49619, 49375, 37917, 58274, 493…
+"
+"1",""
+"1","$ householdincome_white      [3m[90m<int>[39m[23m 48013, 73648, 51631, 45496, 65504, 64737, 66601, 74375, 54073, 56284, 6392…
+"
+"1",""
+"1","$ segregationindex           [3m[90m<int>[39m[23m 35, 11, 37, 27, 22, NA, 15, 18, NA, 24, 23, NA, 24, 38, 25, 33, NA, 28, 42…
+"
+"1",""
+"1","$ firearmfatalitiesrate      [3m[90m<int>[39m[23m 14, 14, 13, 20, NA, NA, 17, 19, NA, 10, 22, NA, 11, 17, 12, 27, NA, 16, 18…
+"
+"1",""
+"1","$ householdincome_black      [3m[90m<int>[39m[23m 71, 74, 66, 74, 82, 81, 74, 74, 72, 85, 77, 77, 63, 55, 59, 77, 74, 77, 65…
+"
+"1",""
+"1","$ population                 [3m[90m<int>[39m[23m 57741, 17722, 87805, 25572, 8809, 1879, 48981, 29786, 7077, 22351, 84761, …
+"
+"1",""
+"1","$ urbanization_status        [3m[90m<fct>[39m[23m Rural, Rural, Rural, Urban, Urban, Urban, Urban, Urban, Rural, Urban, Urba…
+"
+"1",""
+"1","$ border_status              [3m[90m<fct>[39m[23m Non-Border, Non-Border, Non-Border, Non-Border, Non-Border, Non-Border, No…
+"
+"1",""
+"1","$ crime_rate                 [3m[90m<fct>[39m[23m ""3,061.60"", ""3,130.10"", ""3,668.00"", ""4,577.50"", ""1,112.20"", ""1,981.70"", ""2…
+"
+"1",""
+"1","$ crimes_reported            [3m[90m<fct>[39m[23m ""1,787"", ""521"", ""3,235"", ""1,071"", ""77"", ""39"", ""1,152"", ""520"", ""90"", ""283"",…
+"

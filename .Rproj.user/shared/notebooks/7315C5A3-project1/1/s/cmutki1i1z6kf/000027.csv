@@ -1,0 +1,4 @@
+"0","small_joined_data %>% "
+"0","  summarize('meancrimerate'=mean(crime_rate))"
+"2","argument is not numeric or logical: returning NA"
+"2","argument is not numeric or logical: returning NA"

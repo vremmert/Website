@@ -1,0 +1,4 @@
+"0","small_joined_data %>% group_by(urbanization_status) %>%"
+"0","  summarize(mean(crimes_reported))"
+"2","argument is not numeric or logical: returning NA"
+"2","argument is not numeric or logical: returning NA"

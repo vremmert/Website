@@ -1,0 +1,5 @@
+"0","small_joined_data %>% 
+  summarize('number of distinct counties'=n_distinct(County))
+"
+"0","small_joined_data %>% "
+"0","  summarize('mean population'= mean(population))"

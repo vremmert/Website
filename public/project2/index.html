@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Veronica Remmert" />
+    <meta name="description" content="Describe your website">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <title>Project 2 Modeling, Testing, and Predicting: Health Related Data from Four Low-income Communities in the Valley of Atlixco, Mexico</title>
+    <meta name="generator" content="Hugo 0.70.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="resume.pdf">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="/project2/">Project 2 Modeling, Testing, and Predicting: Health Related Data from Four Low-income Communities in the Valley of Atlixco, Mexico</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          January 1, 0001
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+
+<p>#Veronica Remmert, VMR756</p>
+<div id="introduction" class="section level2">
+<h2>0.Introduction</h2>
+<p><em>The data from ‘healthmx’ was collected during Summer 2019 as part of UT Austin’s President’s Award for Global Learning. Three rural pueblos and one urban colonia popular surrounding Atlixco, Puebla, Mexico were selected to conduct a comprehensive community health needs assessment in order to understand and address health inequities that are present in these low-income communities.The dataset used for this assignment was created from the semi-quantitative household survey data, is heavily redacted, and much smaller than the actual dataset, which had over 200 questions. This research was approved by the IRB and was conducted under IRB guidelines. The data analysis for this project is exploratory and will not be used for publication or policy decisions. The ‘number’ variable relates to the relative timing of the survey, where 1 was the first household surveyed, and the variable ‘rID’ is the unique ID for the survey. The ‘community’ variable is the community where the survey was recorded and the ‘housholdstucture’ variable is the classification of the household such as nuclear or extended. The variable ‘hp_visit’ is the number of times someone in the houshold visited the household in the last three months from when the survey was taken. The ‘transportation’ variable is the type of transportation used to get to healthcare appointment and ‘hp_time’ is the amount of time it took to get to the healthcare appointment. The variable ‘hp_payment’ is the general amount paid for the healthcare services, where the options are none, part, or all. The ‘payment_difficulty’ is how difficult it was to absorb the costs related to healthcare in the household and ‘confidence’ was the amount of confidence in the provider the houshold had. The ‘gender’ variable is corresponds to the identified gender of the respondent, and the ‘urban’ variable was whether or not the community was classified as rural or urban. ‘Hhsize’ refers to the number of people living in the house and ‘age’ is the age of the respondent. The ‘public_hp’ is a variable to describe the primary healthcare utilization type of the household, where 1 is a public provider and 0 is private healthcare provider Overall, there are 242 observations or surveys in this dataset.</em></p>
+<pre class="r"><code>library(dplyr)
+library(ggplot2)
+library(tidyverse)
+library(lmtest)
+library(sandwich)
+library(plotROC)
+library(readr)
+library(pROC)
+healthmx = read.csv(&quot;healthmx.csv&quot;)
+glimpse(healthmx)</code></pre>
+<pre><code>## Observations: 242
+## Variables: 18
+## $ number            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, …
+## $ rID               &lt;fct&gt; R_cQGUwNi7fR2c4lI, R_4kPd7IAqbMnbwbQ, R_dmoHEjkjeq6…
+## $ community         &lt;fct&gt; San Fco Xochiteopan, San Fco Xochiteopan, San Fco X…
+## $ housholdstructure &lt;fct&gt; Nuclear, Extendida, Nuclear, Extendida, Nuclear y c…
+## $ hp_visit          &lt;fct&gt; 1-2 veces, 3-4 veces, 3-4 veces, 1-2 veces, Ninguna…
+## $ transportation    &lt;fct&gt; Caminando, Carro/caminioneta (propio), Carro/camini…
+## $ hp_difficulty     &lt;fct&gt; Muy difícil, Un poco difícil, Un poco difícil, Muy …
+## $ hp_payment        &lt;fct&gt; &quot;Una parte&quot;, &quot;Todo&quot;, &quot;Todo&quot;, &quot;Todo&quot;, &quot;Todo&quot;, &quot;Todo&quot;…
+## $ pay_difficulty    &lt;fct&gt; Un poco difícil, Muy difícil, Muy difícil, Muy difí…
+## $ confidence        &lt;fct&gt; Mucha confianza, Mucha confianza, Mucha confianza, …
+## $ gender            &lt;fct&gt; F, F, M, F, F, F, F, F, M, M, F, M, M, M, M, M, F, …
+## $ urban             &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+## $ hp_time           &lt;int&gt; 60, 60, 30, 60, 30, 15, 2, 10, 15, 10, 10, 10, 1000…
+## $ hhsize            &lt;int&gt; 5, 5, 3, 6, 3, 3, 4, 2, 3, 3, 3, 3, 2, 4, 7, 3, 1, …
+## $ age               &lt;int&gt; 45, 64, 34, 59, 30, 57, 45, 59, 31, 78, 38, 60, 77,…
+## $ burden            &lt;int&gt; 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, …
+## $ public_hp         &lt;int&gt; NA, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0,…
+## $ hcu               &lt;fct&gt; NA, public, private, private, private, public, publ…</code></pre>
+<pre class="r"><code>healthmx$female &lt;- NULL</code></pre>
+</div>
+<div id="manova-and-anova-testing" class="section level2">
+<h2>1. MANOVA and ANOVA Testing</h2>
+<pre class="r"><code># MANOVA
+healthmx1 &lt;- healthmx %&gt;% drop_na(hhsize, age, hp_time, hp_payment)
+man &lt;- manova(cbind(hhsize, age, hp_time) ~ hp_payment, data = healthmx1)
+summary(man)</code></pre>
+<pre><code>##             Df   Pillai approx F num Df den Df  Pr(&gt;F)   
+## hp_payment   2 0.072046   2.8525      6    458 0.00975 **
+## Residuals  230                                           
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code># Homogeneity of (CO)Variances Assumption
+covmats &lt;- healthmx1 %&gt;% group_by(hp_payment) %&gt;% do(covs = cov(.[13:15]))
+for (i in 1:3) {
+    print(as.character(covmats$hp_payment[i]))
+    print(covmats$covs[i])
+}</code></pre>
+<pre><code>## [1] &quot;No, nada&quot;
+## [[1]]
+##            hp_time     hhsize      age
+## hp_time 1255.28831  10.366234 154.0130
+## hhsize    10.36623   3.690584 -10.7289
+## age      154.01299 -10.728896 319.4282
+## 
+## [1] &quot;Todo&quot;
+## [[1]]
+##             hp_time     hhsize       age
+## hp_time 26711.38730 -37.419962  15.56620
+## hhsize    -37.41996   3.430393 -13.37143
+## age        15.56620 -13.371433 267.98732
+## 
+## [1] &quot;Una parte&quot;
+## [[1]]
+##            hp_time    hhsize       age
+## hp_time 669.317358 -4.674459  51.22735
+## hhsize   -4.674459  3.423729  -7.51315
+## age      51.227352 -7.513150 237.02805</code></pre>
+<pre class="r"><code># ANOVA
+summary(aov(hhsize ~ hp_payment, data = healthmx1))</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value Pr(&gt;F)
+## hp_payment    2    2.1   1.062   0.304  0.738
+## Residuals   230  802.9   3.491</code></pre>
+<pre class="r"><code>summary(aov(age ~ hp_payment, data = healthmx1))</code></pre>
+<pre><code>##              Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+## hp_payment    2   3198  1598.9   5.868 0.00327 **
+## Residuals   230  62671   272.5                   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>summary(aov(hp_time ~ hp_payment, data = healthmx1))</code></pre>
+<pre><code>##              Df  Sum Sq Mean Sq F value Pr(&gt;F)  
+## hp_payment    2   84425   42213   3.003 0.0516 .
+## Residuals   230 3233094   14057                 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>healthmx %&gt;% count(hp_payment)</code></pre>
+<pre><code>## # A tibble: 4 x 2
+##   hp_payment     n
+##   &lt;fct&gt;      &lt;int&gt;
+## 1 No, nada      59
+## 2 Todo         118
+## 3 Una parte     64
+## 4 &lt;NA&gt;           1</code></pre>
+<pre class="r"><code>healthmx %&gt;% group_by(hp_payment) %&gt;% summarize(mean = sd(age, 
+    na.rm = TRUE))</code></pre>
+<pre><code>## # A tibble: 4 x 2
+##   hp_payment  mean
+##   &lt;fct&gt;      &lt;dbl&gt;
+## 1 No, nada    17.8
+## 2 Todo        16.4
+## 3 Una parte   15.6
+## 4 &lt;NA&gt;        NA</code></pre>
+<pre class="r"><code>healthmx %&gt;% group_by(hp_payment) %&gt;% summarize(mean = sd(hhsize, 
+    na.rm = TRUE))</code></pre>
+<pre><code>## # A tibble: 4 x 2
+##   hp_payment  mean
+##   &lt;fct&gt;      &lt;dbl&gt;
+## 1 No, nada    1.92
+## 2 Todo        1.85
+## 3 Una parte   1.84
+## 4 &lt;NA&gt;       NA</code></pre>
+<pre class="r"><code>healthmx %&gt;% group_by(hp_payment) %&gt;% summarize(mean = sd(hp_time, 
+    na.rm = TRUE))</code></pre>
+<pre><code>## # A tibble: 4 x 2
+##   hp_payment  mean
+##   &lt;fct&gt;      &lt;dbl&gt;
+## 1 No, nada    34.7
+## 2 Todo       163. 
+## 3 Una parte   25.4
+## 4 &lt;NA&gt;        NA</code></pre>
+<pre class="r"><code># Post- Hoc T Tests
+pairwise.t.test(healthmx1$hhsize, healthmx1$hp_payment, p.adj = &quot;none&quot;)</code></pre>
+<pre><code>## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+## data:  healthmx1$hhsize and healthmx1$hp_payment 
+## 
+##           No, nada Todo
+## Todo      0.47     -   
+## Una parte 0.85     0.61
+## 
+## P value adjustment method: none</code></pre>
+<pre class="r"><code>pairwise.t.test(healthmx1$age, healthmx1$hp_payment, p.adj = &quot;none&quot;)</code></pre>
+<pre><code>## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+## data:  healthmx1$age and healthmx1$hp_payment 
+## 
+##           No, nada Todo 
+## Todo      0.001    -    
+## Una parte 0.202    0.061
+## 
+## P value adjustment method: none</code></pre>
+<pre class="r"><code>pairwise.t.test(healthmx1$hp_time, healthmx1$hp_payment, p.adj = &quot;none&quot;)</code></pre>
+<pre><code>## 
+##  Pairwise comparisons using t tests with pooled SD 
+## 
+## data:  healthmx1$hp_time and healthmx1$hp_payment 
+## 
+##           No, nada Todo 
+## Todo      0.051    -    
+## Una parte 0.980    0.044
+## 
+## P value adjustment method: none</code></pre>
+<pre class="r"><code># Probability of at least one Type 1 Error
+type1 &lt;- 1 - ((1 - 0.05)^13)
+type1</code></pre>
+<pre><code>## [1] 0.4866579</code></pre>
+<pre class="r"><code># Bonferroni Correction
+bonferroni &lt;- 0.05/13
+bonferroni</code></pre>
+<pre><code>## [1] 0.003846154</code></pre>
+<p><em>When performing a MANOVA test, we can see that there is a mean difference in healthcare payment level across household size, age, and time spent to get to healthcare services. Based on the significant p-value of 0.00975 of the MANOVA, there is a mean difference across healthcare payment levels with size, age, and time. With the MANOVA we are unsure as to which numeric variables show the difference, and therefore an ANOVA was performed. As for the assumptions of the MANOVA, the data did include random samples and independent observations, the multivariate normality of DV assumption was met because there were more than 25 samples in each payment group, and there appears to be linear relationship among DVs. However, there appears to be a lack of homogeneity of (co)variances according to the matrices, and there appears to be some univariate or multivariate outliers </em></p>
+<p><em>When performing the three ANOVA tests, it was found the the mean difference in healthcare payment occurs for the response variables of both age of respondent and amount of time it takes to get to healthcare provider. For an ANOVA, the assumptions include random sample and independent observations, independent samples, normal distribution in each group or a large sample, and equal variance of each group. These likely have been met because the respondents were randomly selected, the sampling of each respondent was done independently, there was over 25 samples for each payment group, and the standard deviation is not more than 2x bigger in one group versus another, except for the case of ‘hp_time’.</em></p>
+<p><em>Using the pairwise.t.test function, it was found that there is a difference in ‘No, nada’ and ‘Todo’ when age is used in the pairwise.t.test. It was also found that there is a difference between ‘Todo’ and ‘Una parte’ when time to get to the healthcare provider was used.</em></p>
+<p><em>There was 1 MANOVA, 3 ANOVAs, and 9 pairwise t-tests that were performed. The probability of at least one type I error is 0.4866579 if unadjusted. The boneferroni adjusted significance level that should be used is to keep the overall type I error rate at 0.05 is 0.003846154. After using this significance level, we cannot state that any of the payment groups vary by ‘hp_time’,‘age’, or ‘hhsize’.</em></p>
+</div>
+<div id="randomization-test" class="section level2">
+<h2>2. Randomization Test</h2>
+<pre class="r"><code># DropNA
+healthmx_nona &lt;- healthmx %&gt;% drop_na(gender) %&gt;% drop_na(age)
+# Mean Difference
+healthmx_nona %&gt;% group_by(gender) %&gt;% summarize(means = mean(age)) %&gt;% 
+    summarize(`mean_diff:` = diff(means))</code></pre>
+<pre><code>## # A tibble: 1 x 1
+##   `mean_diff:`
+##          &lt;dbl&gt;
+## 1         7.41</code></pre>
+<pre class="r"><code># Randomization Test
+set.seed(34)
+rand_dist &lt;- vector()
+for (i in 1:5000) {
+    new &lt;- data.frame(age = sample(healthmx_nona$age), gender = healthmx_nona$gender)
+    rand_dist[i] &lt;- mean(new[new$gender == &quot;F&quot;, ]$age) - mean(new[new$gender == 
+        &quot;M&quot;, ]$age)
+}
+mean(rand_dist &gt; 7.413414 | rand_dist &lt; -7.413414)</code></pre>
+<pre><code>## [1] 0.0028</code></pre>
+<pre class="r"><code># Plot of Null Distribution and Test Statistic
+{
+    hist(rand_dist, main = &quot;&quot;, ylab = &quot;Count (n)&quot;)
+    abline(v = -7.413414, col = &quot;red&quot;)
+    abline(v = 7.413414, col = &quot;red&quot;)
+}</code></pre>
+<p><img src="/project2_files/figure-html/unnamed-chunk-3-1.png" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Comparison to t-test
+t.test(data = healthmx_nona, age ~ gender)</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  age by gender
+## t = -3.0901, df = 102.88, p-value = 0.002574
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -12.171436  -2.655392
+## sample estimates:
+## mean in group F mean in group M 
+##        48.74176        56.15517</code></pre>
+<p><em>The null hypothesis of the randomization test is that the mean age is the same between male and female respondents. The alternative hypothesis is that the mean age is different between male and female respondents. The randomization test had a p-value of 0.0022 and therefore the results are significant and we can reject the null hypothesis that the mean age is the same between male and female respondents. WHen a two-sample t-test was run, the p-value was again significant at 0.002574, revealing that both the randiomization test and two-sample t-test arrived at similar conclusions. We reject te null hypothesis that the mean age is the same between male and female respondents.The plot was created to visualize the null distribution, where the red lines represent the positive and negative test statistic, which was 7.413414.</em></p>
+</div>
+<div id="linear-regression-model" class="section level2">
+<h2>3. Linear Regression Model</h2>
+<pre class="r"><code>healthmx$hhsize_c &lt;- healthmx$hhsize - mean(healthmx$hhsize, 
+    na.rm = T)
+healthmx$hp_time_c &lt;- healthmx$hp_time - mean(healthmx$hp_time, 
+    na.rm = T)
+fitlr &lt;- lm(hp_time_c ~ gender * hhsize_c, data = healthmx)
+summary(fitlr)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = hp_time_c ~ gender * hhsize_c, data = healthmx)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -104.63  -28.86  -16.33    3.81 1353.82 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)  
+## (Intercept)        -9.483      8.921  -1.063   0.2889  
+## genderM            37.379     18.437   2.027   0.0438 *
+## hhsize_c           -2.535      4.561  -0.556   0.5789  
+## genderM:hhsize_c  -11.687     11.611  -1.007   0.3152  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 118.1 on 230 degrees of freedom
+##   (8 observations deleted due to missingness)
+## Multiple R-squared:  0.03385,    Adjusted R-squared:  0.02125 
+## F-statistic: 2.686 on 3 and 230 DF,  p-value: 0.04731</code></pre>
+<pre class="r"><code># Regression
+fitlr %&gt;% ggplot(aes(hhsize_c, hp_time_c, color = gender)) + 
+    geom_point() + geom_smooth(method = &quot;lm&quot;) + ggtitle(&quot;Regression of Household Size by Time to get to Healthcare Provider&quot;)</code></pre>
+<p><img src="/project2_files/figure-html/unnamed-chunk-4-1.png" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Normality
+resids &lt;- fitlr$residuals
+fitvals &lt;- fitlr$fitted.values
+ggplot() + geom_histogram(aes(resids), bins = 20) + ggtitle(&quot;Histogram of Residuals&quot;)</code></pre>
+<p><img src="/project2_files/figure-html/unnamed-chunk-4-2.png" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>ggplot() + geom_qq(aes(sample = resids)) + geom_qq() + ggtitle(&quot;QQ Plot&quot;)</code></pre>
+<p><img src="/project2_files/figure-html/unnamed-chunk-4-3.png" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>shapiro.test(resids)</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  resids
+## W = 0.33953, p-value &lt; 2.2e-16</code></pre>
+<pre class="r"><code># Linearity
+ggplot() + geom_point(aes(resids, fitvals)) + ggtitle(&quot;Residuals vs. Fitted Values&quot;)</code></pre>
+<p><img src="/project2_files/figure-html/unnamed-chunk-4-4.png" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Homoskedsaticity
+bptest(fitlr)  #Reject the null hypothesis that the data is homoskedastic</code></pre>
+<pre><code>## 
+##  studentized Breusch-Pagan test
+## 
+## data:  fitlr
+## BP = 7.9138, df = 3, p-value = 0.04783</code></pre>
+<pre class="r"><code># Redo the Regression Using Heteroskedasticity Robust
+# Standard Errors
+coeftest(fitlr, vcov = vcovHC(fitlr))</code></pre>
+<pre><code>## 
+## t test of coefficients:
+## 
+##                  Estimate Std. Error t value Pr(&gt;|t|)   
+## (Intercept)       -9.4826     3.2490 -2.9186 0.003865 **
+## genderM           37.3788    26.4348  1.4140 0.158715   
+## hhsize_c          -2.5348     1.7971 -1.4105 0.159738   
+## genderM:hhsize_c -11.6873    13.5863 -0.8602 0.390559   
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code># Variation Explained
+summary(fitlr)$r.sq</code></pre>
+<pre><code>## [1] 0.03385242</code></pre>
+<p><em>For people with an average household size, male respondents have a higher average time to get to healthcare provider that is 37.379 minutes greater than the centered mean time for female respondents. When controlling for gender, those with an average household size take 2.535 minutes less to get to healthcare provider. The slope of houshold size on time to get to healthcare provider is 11.687 less for males as compared to females.</em></p>
+<p><em>The plot is the regression of centered household size and time to get to healthcare provider, colored by gender of the respondent.</em></p>
+<p><em>The independent observations and random sampling assumption was met due to data collection design. To check normality, the Shapiro-Wilk normality test was run. Because the p-value of this test was very small, we reject the null hypothesis that the data is normally distributed and therefore the normality assumption was not met. This can also seen visually in the histogram, where the data does not appear to be normally distributed. To test for homoskedasticity, the Breuch-Pagan test was run and the p-value was significant, as a result we reject the null hypothesis that the data is homoskedastic and therefore the homoskedastic assumption was not met. Lastly, the linearity assumption appears to be met as seen by the linear relationship between the predictor and response variable.</em></p>
+<p><em>The regression was recomputed with robust standard errors via coeftest(fitlr,vcov=vcovHC(fitlr)). After this was run, none of the coefficient variables (besides the intercept) were significant. Before this was run, the genderM variable coefficient was significant, but with robust standard errors it is no long signficant. When using the robust standard error, the standard errors increased in the genderM variable, going from 18.347 to 26.4348 with robust errors. The standard error interaction between genderM and household size also increased, where it was 11.611 previously and was 13.5863 with robust standard errors. There was little change in the coefficient estimates themselves between the linear regression and the linear regression with robust standard errors.</em></p>
+<p><em>To determine the proportion of variation in the outcome that the model explains, the R squared value of the model was used. Based on the r-squared, the model explains 0.03385 proportion of variation, or 3.385%.</em></p>
+</div>
+<div id="linear-regression-model-with-standard-errors" class="section level2">
+<h2>4.Linear Regression Model with Standard Errors</h2>
+<pre class="r"><code>healthmx$hhsize_c &lt;- healthmx$hhsize - mean(healthmx$hhsize, 
+    na.rm = T)
+healthmx$hp_time_c &lt;- healthmx$hp_time - mean(healthmx$hp_time, 
+    na.rm = T)
+
+set.seed(1)
+samp_distn &lt;- replicate(5000, {
+    boot_dat &lt;- sample_frac(healthmx, replace = T)
+    fit &lt;- lm(hp_time_c ~ gender * hhsize_c, data = boot_dat)
+    coef(fit)
+})
+samp_distn %&gt;% t %&gt;% as.data.frame %&gt;% summarize_all(sd)</code></pre>
+<pre><code>##   (Intercept)  genderM hhsize_c genderM:hhsize_c
+## 1    3.200947 26.44833 1.780814         13.83077</code></pre>
+<p><em>The standard errors calculated with the boostrapped standard errors are very similar to the the standard errors calculated in the linear regression, but the errors are still smaller for bootstrapping. For the linear regression, the intercept SE was 3.2490, genderM SE was 26.4348, household size SE was 1.7971, and the interaction between household size and genderM SE was 13.5863. All of these values are larger than the SE calculated with the bootstrapping, where the Intercept SE was 3.20462, the genderM SE was 25.94308, household size SE was 1.790101, and the interaction between household size and genderM SE was 13.60298. This means that the smaller SE values from the bootstrapping have smaller p-values except for the interaction between household size and genderM. The standard errors are overall very similar.</em></p>
+<p>##5. Logisitic Regression</p>
+<pre class="r"><code>dropna &lt;- healthmx %&gt;% drop_na(public_hp, community, hp_payment)
+model &lt;- glm(public_hp ~ community + hp_payment, data = dropna, 
+    family = binomial(link = &quot;logit&quot;))
+summary(model)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = public_hp ~ community + hp_payment, family = binomial(link = &quot;logit&quot;), 
+##     data = dropna)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.7100  -0.7109   0.2270   0.5230   1.9831  
+## 
+## Coefficients:
+##                               Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)                     3.4894     0.8050   4.335 1.46e-05 ***
+## communityColonia Flores Magon  -0.2846     0.6024  -0.472   0.6366    
+## communitySan Fco Xochiteopan    0.1569     0.5166   0.304   0.7614    
+## communitySanta Ana Coatepec    -0.5690     0.5705  -0.997   0.3185    
+## hp_paymentTodo                 -4.7360     0.7630  -6.207 5.39e-10 ***
+## hp_paymentUna parte            -1.5691     0.8087  -1.940   0.0524 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 321.50  on 233  degrees of freedom
+## Residual deviance: 184.47  on 228  degrees of freedom
+## AIC: 196.47
+## 
+## Number of Fisher Scoring iterations: 6</code></pre>
+<pre class="r"><code>coeftest(model)</code></pre>
+<pre><code>## 
+## z test of coefficients:
+## 
+##                               Estimate Std. Error z value  Pr(&gt;|z|)    
+## (Intercept)                    3.48937    0.80498  4.3347 1.459e-05 ***
+## communityColonia Flores Magon -0.28460    0.60236 -0.4725   0.63659    
+## communitySan Fco Xochiteopan   0.15686    0.51655  0.3037   0.76138    
+## communitySanta Ana Coatepec   -0.56904    0.57048 -0.9975   0.31854    
+## hp_paymentTodo                -4.73598    0.76298 -6.2072 5.393e-10 ***
+## hp_paymentUna parte           -1.56907    0.80873 -1.9402   0.05236 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>exp(coef(model))</code></pre>
+<pre><code>##                   (Intercept) communityColonia Flores Magon 
+##                   32.76529979                    0.75231717 
+##  communitySan Fco Xochiteopan   communitySanta Ana Coatepec 
+##                    1.16983120                    0.56607053 
+##                hp_paymentTodo           hp_paymentUna parte 
+##                    0.00877388                    0.20823823</code></pre>
+<pre class="r"><code># Confusion Matrix
+prob &lt;- predict(model, type = &quot;response&quot;)
+pred &lt;- ifelse(prob &gt; 0.5, 1, 0)
+table(prediction = pred, truth = dropna$public_hp) %&gt;% addmargins</code></pre>
+<pre><code>##           truth
+## prediction   0   1 Sum
+##        0    93  24 117
+##        1    11 106 117
+##        Sum 104 130 234</code></pre>
+<pre class="r"><code># Accuracy
+(93 + 106)/234</code></pre>
+<pre><code>## [1] 0.8504274</code></pre>
+<pre class="r"><code># Sensitivity (TPR)
+106/130</code></pre>
+<pre><code>## [1] 0.8153846</code></pre>
+<pre class="r"><code># Specificity (FPR)
+93/104</code></pre>
+<pre><code>## [1] 0.8942308</code></pre>
+<pre class="r"><code># Precision (PPV)
+106/117</code></pre>
+<pre><code>## [1] 0.9059829</code></pre>
+<pre class="r"><code># Density of Logodds
+dropna$logit &lt;- predict(model, type = &quot;link&quot;)
+dropna %&gt;% ggplot() + geom_density(aes(logit, color = hcu, fill = hcu), 
+    alpha = 0.4) + theme(legend.position = c(0.85, 0.85)) + geom_vline(xintercept = 0) + 
+    xlab(&quot;logit (log-odds)&quot;) + geom_rug(aes(logit, color = hcu))</code></pre>
+<p><img src="/project2_files/figure-html/unnamed-chunk-6-1.png" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># ROC
+tdat &lt;- dropna %&gt;% mutate(prob = predict(model, type = &quot;response&quot;), 
+    prediction = ifelse(prob &gt; 0.5, 1, 0))
+classify &lt;- tdat %&gt;% transmute(prob, prediction, truth = public_hp)
+ROCplot &lt;- ggplot(classify) + geom_roc(aes(d = truth, m = prob), 
+    n.cuts = 0)
+ROCplot</code></pre>
+<p><img src="/project2_files/figure-html/unnamed-chunk-6-2.png" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>calc_auc(ROCplot)</code></pre>
+<pre><code>##   PANEL group       AUC
+## 1     1    -1 0.8884246</code></pre>
+<pre class="r"><code># 10-Fold CV
+set.seed(1234)
+k = 10
+data &lt;- dropna[sample(nrow(dropna)), ]
+folds &lt;- cut(seq(1:nrow(dropna)), breaks = k, labels = F)
+diags &lt;- NULL
+for (i in 1:k) {
+    train &lt;- data[folds != i, ]
+    test &lt;- data[folds == i, ]
+    truth &lt;- test$public_hp
+    fit &lt;- glm(public_hp ~ community + hp_payment, data = train, 
+        family = &quot;binomial&quot;)
+    probs &lt;- predict(fit, newdata = test, type = &quot;response&quot;)
+    diags &lt;- rbind(diags, class_diag(probs, truth))
+}
+summarize_all(diags, mean)</code></pre>
+<pre><code>##         acc      sens      spec       ppv       auc
+## 1 0.8507246 0.8200808 0.8892774 0.9096999 0.8761064</code></pre>
+<p><em>Controlling for community and paying for a part of healthcare services, paying for all of healthcare services has a significant negative impact on odds of going to a public healthcare provider. Controlling for community and paying for a part of healthcare services, the odds of going to a public healthcare provider is 0.00877388 times the odds of someone who pays for none of their healthcare services. Controlling for community and paying for all of healthcare services, paying for part of healthcare services does not have a significant negative impact on odds of going to a public healthcare provider. Controlling for payment for healthcare services, community does not significantly impact if someone goes to public healthcare provider.</em></p>
+<p><em>To compute the accuracy, sensitivity, specificity, and recall a confusion matrix of the model was produced. The accuracy was computed to be 0.8504274, which is a good accuracy at which the model predicts public healthcare utilization. Sensitivity is the true positive rate which is the probability of predicting public healthcare utilization for people who actually use public healthcare services and was calculated to be 0.8153846. Specificity is the true negative rate and is the proability of a person who uses private services been predicted as using public healthcare services and was calculated to be 0.8942308. The precision is the proportion of people who were classified as public healthcare utilizers who actually are and was calculated to be 0.9059829.</em></p>
+<p><em>Based on the density plot we can visualize the misclassified area, which is gray. To the right of 0, the gray area is the proportion of false positives and to the left of 0, the gray area is the proportion of false negatives of the model prediciting public healthcare utilization</em></p>
+<p><em>The ROC plot was generated and a AUC was calculated. THe ROC curve alllows for visualization of the trade-off between sensitivity and specificity. The AUC was calculated to be 0.8884246, which is a good AUC and means that payment level and community are a good predictor of healthcare utilization type.</em></p>
+<p><em>After performing a 10-fold CV, the average accuracy was calculcated to be 0.85, the average sensitivity was calculated to be 0.8048194, the precision was calculcated to be 0.9015287, and the auc was calculated to be 0.8771041. These values, while slightly different, are very similar to the others calculated above. Overall, the model appears to be good at predicting healthcare utilization type.</em></p>
+<p>##6. LASSO</p>
+<pre class="r"><code>library(glmnet)
+set.seed(1234)
+healthmx1 &lt;- healthmx %&gt;% na.omit(public_hp, community, housholdstructure, 
+    hp_visit, transportation, hp_difficulty, hp_payment, pay_difficulty, 
+    confidence, gender, hp_time, hhsize, age)
+y &lt;- as.matrix(healthmx1$public_hp)
+x &lt;- model.matrix(public_hp ~ community + housholdstructure + 
+    hp_visit + transportation + hp_difficulty + hp_payment + 
+    pay_difficulty + confidence + gender + hp_time + hhsize + 
+    age, data = healthmx1)
+cv.lasso1 &lt;- cv.glmnet(x, y, family = &quot;binomial&quot;)
+lasso1 &lt;- glmnet(x, y, family = &quot;binomial&quot;, lambda = cv.lasso1$lambda.1se)
+coef(lasso1)</code></pre>
+<pre><code>## 33 x 1 sparse Matrix of class &quot;dgCMatrix&quot;
+##                                                        s0
+## (Intercept)                                  7.202239e-01
+## (Intercept)                                  .           
+## communityColonia Flores Magon                .           
+## communitySan Fco Xochiteopan                 .           
+## communitySanta Ana Coatepec                  .           
+## housholdstructureExtendida y Compuesta       .           
+## housholdstructureNuclear                     .           
+## housholdstructureNuclear y compuesta         .           
+## housholdstructureSoltero/a                   .           
+## hp_visit3-4 veces                            .           
+## hp_visit5+ veces                             .           
+## hp_visitNinguna vez                          .           
+## transportationCaminando                      6.323514e-01
+## transportationCarro (alguien me lleva)       .           
+## transportationCarro/caminioneta (propio)     .           
+## transportationCombi                          .           
+## transportationTransporte rentado             .           
+## hp_difficultyMuy difícil                     .           
+## hp_difficultyNada difícil                    .           
+## hp_difficultyUn poco difícil                 .           
+## hp_paymentTodo                              -1.891072e+00
+## hp_paymentUna parte                          7.931505e-16
+## pay_difficultyMuy difícil                    .           
+## pay_difficultyNada difícil                   .           
+## pay_difficultyNo sé o prefiero no responder  .           
+## pay_difficultyUn poco difícil                .           
+## confidenceNada de confianza                  .           
+## confidenceNo sé o prefiero no responder      .           
+## confidencePoca confianza                     .           
+## genderM                                      .           
+## hp_time                                      4.019132e-05
+## hhsize                                       .           
+## age                                          .</code></pre>
+<pre class="r"><code># CV Lasso
+healthmx_1 &lt;- healthmx1 %&gt;% mutate(Caminando = ifelse(transportation == 
+    &quot;Caminando&quot;, 1, 0)) %&gt;% mutate(parte = ifelse(hp_payment == 
+    &quot;Una parte&quot;, 1, 0)) %&gt;% select(public_hp, Caminando, parte)
+
+set.seed(1234)
+k = 10
+data &lt;- healthmx_1 %&gt;% sample_frac
+folds &lt;- ntile(1:nrow(data), n = 10)
+diags &lt;- NULL
+for (i in 1:k) {
+    train &lt;- data[folds != i, ]
+    test &lt;- data[folds == i, ]
+    truth &lt;- test$public_hp
+    fit &lt;- glm(public_hp ~ Caminando + parte, data = train, family = &quot;binomial&quot;)
+    probs &lt;- predict(fit, newdata = test, type = &quot;response&quot;)
+    diags &lt;- rbind(diags, class_diag(probs, truth))
+}
+diags %&gt;% summarize_all(mean)</code></pre>
+<pre><code>##         acc     sens      spec       ppv       auc
+## 1 0.8117647 0.650754 0.9197547 0.8538889 0.8329095</code></pre>
+<p><em>The 10-fold CV was performed using the LASSO and revealed a lower accuracy at 0.8 as compared to the accuracy from the logisitic regression of 0.85. This means that the LASSO model has lower accuracy than the logisitc regression model when predicting public healthcare provider utilization. THe 10-fold CV using the LASSO had an AUC of 0.8551299 whereas the AUC from the logistic regression was 0.8771041. This means that the logistic regression model is better at predicting than the model produced from LASSO.</em></p>
+</div>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/docs.min.js"></script>
+<script src="/js/main.js"></script>
+
+<script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>

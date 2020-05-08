@@ -1,0 +1,133 @@
+"0","#Untidying of 'Health' Dataset "
+"0","health_untidy <-health %>%"
+"0","  pivot_longer(c('firearmfatalitiesrate', 'mvmortalityrate'),"
+"0","               names_to=""mortality types"","
+"0","               values_to=""number of mortalities"")%>% glimpse()"
+"1","Observations: 508
+"
+"1","Variables: 14
+"
+"1","$ County                     [3m[90m<fct>[39m[23m Anderson, Anderson, Andrews, Andrews, Angelina, Angelina, Aransas, Aransas…
+"
+"1",""
+"1","$ lifeexpectancy             [3m[90m<dbl>[39m[23m 73.8, 73.8, 76.8, 76.8, 76.3, 76.3, 76.9, 76.9, 77.0, 77.0, 72.4, 72.4, 78…
+"
+"1",""
+"1","$ frequentmentaldistressrate [3m[90m<int>[39m[23m 11, 11, 10, 10, 13, 13, 12, 12, 10, 10, 10, 10, 11, 11, 11, 11, 13, 13, 11…
+"
+"1",""
+"1","$ household_income           [3m[90m<int>[39m[23m 42412, 42412, 63451, 63451, 45318, 45318, 46970, 46970, 58311, 58311, 5533…
+"
+"1",""
+"1","$ householdiincome_black     [3m[90m<int>[39m[23m 24427, 24427, 38359, 38359, 28509, 28509, NA, NA, NA, NA, NA, NA, 72827, 7…
+"
+"1",""
+"1","$ householdincome_hispanic   [3m[90m<int>[39m[23m 37635, 37635, 66319, 66319, 41673, 41673, 43302, 43302, 34375, 34375, 1502…
+"
+"1",""
+"1","$ householdincome_white      [3m[90m<int>[39m[23m 48013, 48013, 73648, 73648, 51631, 51631, 45496, 45496, 65504, 65504, 6473…
+"
+"1",""
+"1","$ segregationindex           [3m[90m<int>[39m[23m 35, 35, 11, 11, 37, 37, 27, 27, 22, 22, NA, NA, 15, 15, 18, 18, NA, NA, 24…
+"
+"1",""
+"1","$ householdincome_black      [3m[90m<int>[39m[23m 71, 71, 74, 74, 66, 66, 74, 74, 82, 82, 81, 81, 74, 74, 74, 74, 72, 72, 85…
+"
+"1",""
+"1","$ population                 [3m[90m<int>[39m[23m 57741, 57741, 17722, 17722, 87805, 87805, 25572, 25572, 8809, 8809, 1879, …
+"
+"1",""
+"1","$ urbanization_status        [3m[90m<fct>[39m[23m Rural, Rural, Rural, Rural, Rural, Rural, Urban, Urban, Urban, Urban, Urba…
+"
+"1",""
+"1","$ border_status              [3m[90m<fct>[39m[23m Non-Border, Non-Border, Non-Border, Non-Border, Non-Border, Non-Border, No…
+"
+"1",""
+"1","$ `mortality types`          [3m[90m<chr>[39m[23m ""firearmfatalitiesrate"", ""mvmortalityrate"", ""firearmfatalitiesrate"", ""mvmo…
+"
+"1",""
+"1","$ `number of mortalities`    [3m[90m<int>[39m[23m 14, 19, 14, 43, 13, 20, 20, 19, NA, 26, NA, NA, 17, 20, 19, 22, NA, 30, 10…
+"
+"0","#Tidying of 'Health' Dataset "
+"0","health_untidy %>% "
+"0","  spread(key=""mortality types"",value=""number of mortalities"")%>% "
+"0","  glimpse()"
+"1","Observations: 254
+"
+"1","Variables: 14
+"
+"1","$ County                     [3m[90m<fct>[39m[23m Anderson, Andrews, Angelina, Aransas, Archer, Armstrong, Atascosa, Austin,…
+"
+"1",""
+"1","$ lifeexpectancy             [3m[90m<dbl>[39m[23m 73.8, 76.8, 76.3, 76.9, 77.0, 72.4, 78.3, 79.1, 78.4, 80.3, 77.6, 74.3, 76…
+"
+"1",""
+"1","$ frequentmentaldistressrate [3m[90m<int>[39m[23m 11, 10, 13, 12, 10, 10, 11, 11, 13, 11, 11, 12, 11, 11, 11, 11, 9, 11, 12,…
+"
+"1",""
+"1","$ household_income           [3m[90m<int>[39m[23m 42412, 63451, 45318, 46970, 58311, 55337, 48636, 61111, 42045, 55578, 6299…
+"
+"1",""
+"1","$ householdiincome_black     [3m[90m<int>[39m[23m 24427, 38359, 28509, NA, NA, NA, 72827, 40096, NA, NA, 46866, NA, 41051, 4…
+"
+"1",""
+"1","$ householdincome_hispanic   [3m[90m<int>[39m[23m 37635, 66319, 41673, 43302, 34375, 150250, 49619, 49375, 37917, 58274, 493…
+"
+"1",""
+"1","$ householdincome_white      [3m[90m<int>[39m[23m 48013, 73648, 51631, 45496, 65504, 64737, 66601, 74375, 54073, 56284, 6392…
+"
+"1",""
+"1","$ segregationindex           [3m[90m<int>[39m[23m 35, 11, 37, 27, 22, NA, 15, 18, NA, 24, 23, NA, 24, 38, 25, 33, NA, 28, 42…
+"
+"1",""
+"1","$ householdincome_black      [3m[90m<int>[39m[23m 71, 74, 66, 74, 82, 81, 74, 74, 72, 85, 77, 77, 63, 55, 59, 77, 74, 77, 65…
+"
+"1",""
+"1","$ population                 [3m[90m<int>[39m[23m 57741, 17722, 87805, 25572, 8809, 1879, 48981, 29786, 7077, 22351, 84761, …
+"
+"1",""
+"1","$ urbanization_status        [3m[90m<fct>[39m[23m Rural, Rural, Rural, Urban, Urban, Urban, Urban, Urban, Rural, Urban, Urba…
+"
+"1",""
+"1","$ border_status              [3m[90m<fct>[39m[23m Non-Border, Non-Border, Non-Border, Non-Border, Non-Border, Non-Border, No…
+"
+"1",""
+"1","$ firearmfatalitiesrate      [3m[90m<int>[39m[23m 14, 14, 13, 20, NA, NA, 17, 19, NA, 10, 22, NA, 11, 17, 12, 27, NA, 16, 18…
+"
+"1",""
+"1","$ mvmortalityrate            [3m[90m<int>[39m[23m 19, 43, 20, 19, 26, NA, 20, 22, 30, 24, 27, 55, 19, 15, 11, 20, NA, 25, 15…
+"
+"0","#Untidying of 'Crime' Dataset "
+"0","crime1 <-crime %>%"
+"0","  pivot_longer(c('crimes_reported','crime_rate'), "
+"0","               names_to='crimes reported and crime rate',"
+"0","               values_to='values') %>% glimpse()"
+"1","Observations: 508
+"
+"1","Variables: 3
+"
+"1","$ county                           [3m[90m<fct>[39m[23m Loving, Loving, Cooke, Cooke, Bexar, Bexar, McMullen, McMullen, Pott…
+"
+"1",""
+"1","$ `crimes reported and crime rate` [3m[90m<chr>[39m[23m ""crimes_reported"", ""crime_rate"", ""crimes_reported"", ""crime_rate"", ""c…
+"
+"1",""
+"1","$ values                           [3m[90m<fct>[39m[23m ""10"", ""14,706.00"", ""991"", ""5,820.90"", ""101,005"", ""5,559.40"", ""40"", ""…
+"
+"0","#Tidying of 'Crime' Dataset "
+"0","crime1 %>%"
+"0","  spread(key='crimes reported and crime rate', "
+"0","         value='values') %>%"
+"0","  glimpse()"
+"1","Observations: 254
+"
+"1","Variables: 3
+"
+"1","$ county          [3m[90m<fct>[39m[23m Anderson, Andrews, Angelina, Aransas, Archer, Armstrong, Atascosa, Austin, Bailey, Ba…
+"
+"1",""
+"1","$ crime_rate      [3m[90m<fct>[39m[23m ""3,061.60"", ""3,130.10"", ""3,668.00"", ""4,577.50"", ""1,112.20"", ""1,981.70"", ""2,416.70"", ""…
+"
+"1",""
+"1","$ crimes_reported [3m[90m<fct>[39m[23m ""1,787"", ""521"", ""3,235"", ""1,071"", ""77"", ""39"", ""1,152"", ""520"", ""90"", ""283"", ""1,732"", ""…
+"

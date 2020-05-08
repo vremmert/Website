@@ -1,0 +1,2 @@
+"0","small_joined_data %>% "
+"0","  summarize('median life expectancy'=median(lifeexpectancy))"

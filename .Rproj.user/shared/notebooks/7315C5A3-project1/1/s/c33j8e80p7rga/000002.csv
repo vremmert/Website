@@ -1,0 +1,5 @@
+"0","tinytex::uninstall_tinytex()
+"
+"2","Error in tinytex::uninstall_tinytex() : 
+  Detected TeX Live at ""/usr/local/texlive/2020"", but it appears to be TeX Live instead of TinyTeX. To uninstall TeX Live, use the argument force = TRUE.
+"
