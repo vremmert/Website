@@ -1,0 +1,33 @@
+---
+title: Using Python and R
+author: ''
+date: '2020-05-09'
+slug: using-python-and-r
+categories: []
+tags: []
+description: ''
+---
+
+
+
+<p>One can easily switch between Python and R studio through the reticulate package. The reticulate package allows the R interface to run Python code.</p>
+<div id="setup" class="section level1">
+<h1>Setup</h1>
+<p>Open up an R-markdown file to explore. First, install the reticulate package to and {R} code chunk by running the following code install.package() code and then calling the package through library().</p>
+<pre class="r"><code>library(reticulate)</code></pre>
+</div>
+<div id="basic-example" class="section level1">
+<h1>Basic Example</h1>
+<p>The next step is to assign information into a object. Here I assigned ‘dog’ into ‘d’.</p>
+<pre class="r"><code>#R Studio
+d&lt;-&quot;dog&quot;</code></pre>
+<p>Next step is to create a {python} code chunk. Now assign information, similarly to the R code. For this example I assigned ‘cute’ into ‘d’. Then to allow for the exhange of information between the chunks, use the function ‘print()’. Using this function you can access the previously assigned R objects with ‘r.objectname’. The ‘print()’ function looks for things in the R environment and reads then in python. Above I used ‘d’ for the R code, so to access it within ‘print()’ I just added ‘r.d’. The R and python code interact with each other, as seen by the output.</p>
+<pre class="python"><code>#Python
+d=&#39;cute&#39;
+print(d,r.d)</code></pre>
+<pre><code>## (&#39;cute&#39;, &#39;dog&#39;)</code></pre>
+</div>
+<div id="potential-uses" class="section level1">
+<h1>Potential Uses</h1>
+<p>A ootential use is pulling an R package and using ut within python. This can allow you to import an dataset that is built-into R and use it in Python. Similarly, if there is a dataset or something of interest in R, you can pull it from python and use it in R.</p>
+</div>

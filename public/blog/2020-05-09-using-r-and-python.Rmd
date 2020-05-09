@@ -1,0 +1,25 @@
+---
+title: Using R and Python
+author: ''
+date: '2020-05-09'
+slug: using-r-and-python
+categories: []
+tags: []
+description: ''
+---
+One can easily switch between both Python and R studio. FIrst, grab an R Markdown file and open it. Create a {R} code chunk to use the R language for the code. Then run 'library(reticulate)', which allows for the R code and Python code to exchange information. 
+The next step is to assign information into a object.  Here I assigned 'Hello' into 'hi'. 
+```{r}
+#Using R Studio
+library(reticulate)
+hi<-"Hello"
+```
+
+Next step is to create a {python} code chunk. Now assign information, similarly to the R code. For this example I assigned 'world' into 'hi'. Then to allow for the exhange of information between the chunks, use the function 'print()', where you can access the previously assigned R objects with 'r.objectname'. The 'print()' function looks for things in the R environment and reads then in python. Above I used 'hi' for the R code, so to access it within 'print()' I just added 'r.hi'. The R and python code interact with each other. 
+```{python}
+#Using Python
+hi='world'
+print(r.hi,hi )
+```
+
+
