@@ -11,6 +11,6 @@ title: Projects
 
 Here are some projects I have recently completed:
 
-- [Exploratory Data Analysis with Tidyverse Tools](/project1/)
+- [Exploratory Data Analysis with Tidyverse Tools: Crime and Demographics in Texas Counties](/project1/)
 
-- [Modeling, Testing, and Classification](/project2/)
+- [Modeling, Testing, and Predicting: Health Related Data from Four Low-Income Communities in the Valley of Atlixco, Mexico](/project2/)

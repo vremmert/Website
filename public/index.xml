@@ -18,9 +18,27 @@
       
       <guid>/projects/</guid>
       <description>Projects Here are some projects I have recently completed:
-  Exploratory Data Analysis with Tidyverse Tools
-  Modeling, Testing, and Classification
+  Exploratory Data Analysis with Tidyverse Tools: Crime and Demographics in Texas Counties
+  Modeling, Testing, and Predicting: Health Related Data from Four Low-Income Communities in the Valley of Atlixco, Mexico
   </description>
+    </item>
+    
+    <item>
+      <title>Exploratory Data Analysis with Tidyverse Tools: Crime and Demographics in Texas Counties</title>
+      <link>/project1/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project1/</guid>
+      <description>Introduction The ‘health’ dataset is the 2019 Country Health Rankings and Roadmaps dataset and describes different health-realted statistics in Texas counties. Variables include Texas counties by name, average life expectancy, population size for the county, and average household income. The border status variable categrizes each county as a border or non-border county, defining a any county within 100 Kilometers of the U.S. and Mexico border as a border county. The urbanization status variable categorizes each county into rural or urban based on population density and other measures of dense development.</description>
+    </item>
+    
+    <item>
+      <title>Modeling, Testing, and Predicting: Health Related Data from Four Low-Income Communities in the Valley of Atlixco, Mexico</title>
+      <link>/project2/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project2/</guid>
+      <description>0.Introduction The data from ‘healthmx’ was collected during Summer 2019 as part of UT Austin’s President’s Award for Global Learning. Three rural pueblos and one urban colonia popular surrounding Atlixco, Puebla, Mexico were selected to conduct a comprehensive community health needs assessment in order to understand and address health inequities that are present in these low-income communities.The dataset used for this assignment was created from the semi-quantitative household survey data, is heavily redacted, and much smaller than the actual dataset, which had over 200 questions.</description>
     </item>
     
     <item>
@@ -77,25 +95,6 @@ Follow the following steps:
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
 ▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
-    </item>
-    
-    <item>
-      <title>Project 1 Exploratory Data Analysis: Crime and Demographics in Texas Counties </title>
-      <link>/project1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/project1/</guid>
-      <description>Introduction The ‘health’ dataset is the 2019 Country Health Rankings and Roadmaps dataset and describes different health-realted statistics in Texas counties. Variables include Texas counties by name, average life expectancy, population size for the county, and average household income. The border status variable categrizes each county as a border or non-border county, defining a any county within 100 Kilometers of the U.S. and Mexico border as a border county. The urbanization status variable categorizes each county into rural or urban based on population density and other measures of dense development.</description>
-    </item>
-    
-    <item>
-      <title>Project 2 Modeling, Testing, and Predicting: Health Related Data from Four Low-income Communities in the Valley of Atlixco, Mexico</title>
-      <link>/project2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/project2/</guid>
-      <description>#Veronica Remmert, VMR756
-0.Introduction The data from ‘healthmx’ was collected during Summer 2019 as part of UT Austin’s President’s Award for Global Learning. Three rural pueblos and one urban colonia popular surrounding Atlixco, Puebla, Mexico were selected to conduct a comprehensive community health needs assessment in order to understand and address health inequities that are present in these low-income communities.The dataset used for this assignment was created from the semi-quantitative household survey data, is heavily redacted, and much smaller than the actual dataset, which had over 200 questions.</description>
     </item>
     
   </channel>

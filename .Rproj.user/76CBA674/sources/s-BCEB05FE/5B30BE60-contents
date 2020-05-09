@@ -1,7 +1,7 @@
 ---
 title: "Project 1 Exploratory Data Analysis: Crime and Demographics in Texas Counties "
 author: "Veronica Remmert"
-showpagemeta: false
+date: 2020-05-01
 output: 
   pdf_document: default
   word_document: default
